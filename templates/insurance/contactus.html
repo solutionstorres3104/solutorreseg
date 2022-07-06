@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+</head>
+
+<body>
+
+  {% include "insurance/navbar.html" %}
+  <br>
+
+  <center>
+    <h3 class='alert alert-success'>Póngase en contacto con nosotros y nos pondremos en contacto con usted dentro de las 24 horas.</h3>
+
+    <form method="POST" autocomplete="off">
+      <!-- Very Important csrf Token -->
+      {% csrf_token %}
+      <div class="form-group">
+        <p>
+        <h3>{{ form.as_p }}</h3>
+        </p>
+        <br>
+        <input type="submit" value="Enviar mensaje" class='button-main'>
+       
+      </div>
+    </form>
+  </center>
+
+  {% include "insurance/footer.html" %}
+</body>
+
+</html>

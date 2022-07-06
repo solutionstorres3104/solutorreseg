@@ -1,0 +1,318 @@
+{% for licita in licitas %}
+<div class="col mb-3">
+
+     
+    <div class="card" style="width: 100%; margin: 5px 5px;">
+        
+
+        <div class="card-body" style="text-align: center;">
+            <h7 class="card-title">{{licita.CodigoExterno}}</h7>
+            <p class="card-text">{{licita.Nombre}} &nbsp;$</p>
+        </div>
+
+       
+    </div>
+
+
+
+</div>    
+<div class="col-md-12">
+    <section id="licitaciones">
+        <h2 class="titu-dropdown">
+            Resultados de la Búsqueda
+            <a href="#ordenar" class="pull-right" data-toggle="collapse"><small>ORDENAR RESULTADOS <i class="fa fa-sort"></i></small></a>
+        </h2>
+        <div class="row">
+            <div class="col-sm-16">
+                <div id="ordenar" class="order collapse " aria-expanded="">
+                    <ul class="list-inline">
+
+        
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    ID de Licitación
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=nro_licitacion%20asc">
+                                            <i class="fa fa-long-arrow-up"></i>Ascendente
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=nro_licitacion%20desc">
+                                            <i class="fa fa-long-arrow-down"></i>Descendente
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+            
+                    
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Etapa
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=etapa%20asc">
+                                            <i class="fa fa-long-arrow-up"></i>Ascendente
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=etapa%20desc">
+                                            <i class="fa fa-long-arrow-down"></i>Descendente
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+            
+                    
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Convocante
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=convocante%20asc">
+                                            <i class="fa fa-long-arrow-up"></i>Ascendente
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=convocante%20desc">
+                                            <i class="fa fa-long-arrow-down"></i>Descendente
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+            
+                    
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Tipo de Procedimiento
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=tipo_procedimiento%20asc">
+                                            <i class="fa fa-long-arrow-up"></i>Ascendente
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=tipo_procedimiento%20desc">
+                                            <i class="fa fa-long-arrow-down"></i>Descendente
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+            
+                    
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Publicación de la Convocatoria
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=fecha_publicacion_convocatoria%20asc">
+                                            <i class="fa fa-long-arrow-up"></i>Ascendente
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=fecha_publicacion_convocatoria%20desc">
+                                            <i class="fa fa-long-arrow-down"></i>Descendente
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+            
+                    
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Fecha de Entrega de Ofertas
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=fecha_entrega_oferta%20asc">
+                                            <i class="fa fa-long-arrow-up"></i>Ascendente
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=fecha_entrega_oferta%20desc">
+                                            <i class="fa fa-long-arrow-down"></i>Descendente
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+            
+                    
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<ul class="results">
+    <li>
+        <article>
+            <header>
+                <h3>
+                    <a href="/licitaciones/convocatoria/407921-lpi-n-4pm-2022-servicio-impresion-provision-billetes-1.html">{{ licita.CodigoExterno }}</a>
+                    <span class="tags">
+                        <span class="label label-default" title="Plurianual" >
+                            Plurianual
+                        </span>
+                    
+                        <span class="label label-default" title="Oferta Electrónica" >
+                            Oferta Electrónica
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="inline-actions visible-xs visible-sm">
+                    <a href="/licitaciones/convocatoria/407921-lpi-n-4pm-2022-servicio-impresion-provision-billetes-1.html">Ver Convocatoria</a>  |             <a href="/licitaciones/planificacion/407921-servicio-impresion-provision-billetes-1.html">Ver Planificación</a>     
+                </div>
+
+            </header>
+
+            <div class="row info vcenter">
+                <div class="col-sm-16 col-md-11 col-lg-12">
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>{{ licita.CodigoExterno }}</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Banco Central del Paraguay / Banca Central del Estado
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            7 - Servicios Técnicos
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            LPI - Licitación Pública Internacional
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <span class="info-label">Publicación de la Convocatoria</span>                                             
+                                08-06-2022
+                        </div>
+                            <span class="info-label">Fecha de Entrega de Ofertas</span>
+                                23-08-2022
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">
+                    <div class="btn-group">
+                        <a href="/licitaciones/convocatoria/407921-lpi-n-4pm-2022-servicio-impresion-provision-billetes-1.html" class="btn btn-sm btn-dncp-dropdown">Ver Convocatoria</a>
+
+                        <a class="btn btn-sm btn-dncp-dropdown dropdown-toggle"
+                            data-toggle="dropdown">
+                             <span class="caret"></span>
+                             <span class="sr-only">Otras Acciones</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li>
+                                <a href="/licitaciones/planificacion/407921-servicio-impresion-provision-billetes-1.html">Ver Planificación</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+        </article>
+    </li>
+</ul>
+
+<div class="tools">
+    <td colspan="8">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="downloadTool">
+                    Descargar datos como:
+                    <a href="/buscador/licitaciones.csv?etapas_licitacion%5B0%5D=CONV" class="btn btn-default"> <i class="fa fa-cloud-download"></i> Archivo CSV</a>
+                </div>
+            </div>
+            <div class="col-md-9 text-right">
+                <div class="pagination-block">
+                    <div class="results-info">Se muestran del 1 al 10 de 545 resultados</div>
+                </div>
+                <ul class="pagination">
+                    <li class="pagination-prev disabled">
+                        <span>
+                            <span class="glyphicon glyphicon-chevron-left">
+
+                            </span>
+                        </span>
+                    </li>
+                    <li class="active">
+                        <span>1 
+                            <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=2">2
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=3">3</a>
+                    </li>
+                    <li>
+                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=4">4</a>
+                    </li>
+                    <li>
+                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=5">5</a>
+                    </li>
+                    <li class="disabled">
+                        <span>&hellip;</span>
+                    </li>
+                    <li>
+                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=55">55</a>
+                    </li>
+                    <li class="pagination-next">
+                        <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=2" rel="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </td>    
+</div>
+{% endfor %}

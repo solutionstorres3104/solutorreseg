@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'post/main.css' %}">
+  
+		<title>SoluTorresSeguros</title>
+	
+</head
+
+
+
+<body>
+
+  {% include "insurance/navbar.html" %}
+  <br><br>
+  <div class="jumbotron text-center" style="margin-bottom:0px;">
+    <h1 class="display-4">Bienvenido</h1>
+    <p class="lead">Bienvenido al Sistema de Gestión de Licitaciones Online</p>
+    <hr class="my-4">
+    <p>Puede acceder a varias funciones después de iniciar sesión.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="customersignup" role="button">Crea tu cuenta</a>
+      <a class="btn btn-primary btn-lg" href="customerlogin" role="button">Login</a>
+    </p>
+    <br><br><br>
+  </div>
+ 
+  {% include "insurance/footer.html" %}
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{% include "insurance/navbar.html" %} 
+{% block content %}
+{% load static %}
+
+<div style="text-align: center;">
+    <div class="col-sm-9">
+        <div>
+            <article id="ads" class="media content-section" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div style="padding: 10px;">
+                    <div>
+                        <b id='business-name' style="color: black;font-size: 20px">ID Licitación: {{ users.CodigoExterno }}</b>
+                        <br>
+                        <b id='business-name' style="color: blue;font-size: 22px"> {{ users.Nombre }}</b>
+                    </div>
+                </div>
+            </article>
+        </div>
+     </div>
+</div>
+
+{% endblock content %}

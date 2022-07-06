@@ -1,0 +1,124 @@
+{% extends 'customer/customerbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 450px; /* Should be removed. Only for demonstration */
+      }
+      
+      /*  Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      </style>
+</head>
+
+<form class="form-inline pull-right" action="/asegurar1/">
+  Id Licitacion: <input type="text" id="txtVarX" /><br />
+  <button type="button" id="cmdRedirect">Buscar</button>
+
+  <div class="col-md-4 ">
+    <form action="." method="POST">
+          {%csrf_token%}
+         
+          <a class="btn" href="{% url 'customer:vencedores' '3593-28-L122' %}" rel="tooltip" data-original-title="Mais informações sobre a partida">Detalhes</a>  
+     </form>     
+  </div>
+  
+</form>
+
+
+
+
+<h2 style="text-align:center; color:blue;">ASEGURAR</h2>
+
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+   
+    <div class="row">
+      <div class="col-lg-12">
+        <span class="info-label" style="text-align: left; color: black; font-size: 16px;">Descripción:</span>
+        <em>{{ users.Descripcion }}</em>
+     </div>
+      <div class="column" style="background-color:#aaa;">
+        <h2>Datos de la Licitación</h2>
+        
+        <label for="course_name"> RUT Mandante</label>
+        {% render_field question1Form.rut_unidad class="form-control" placeholder=" RUT Mandante" %}
+        <label for="course_name">Nombre Mandante</label>
+        {% render_field question1Form.nombre_unidad class="form-control" placeholder="Nombre Mandante" %}
+        <label for="course_name">Calle (dirección)</label>
+        {% render_field question1Form.calle_unidad class="form-control" placeholder="Calle (dirección)" %}
+        <label for="course_name">Número (dirección)</label>
+        {% render_field question1Form.numero_unidad class="form-control" placeholder="Número (dirección)" %}
+        <label for="course_name">Región</label>
+        {% render_field question1Form.comuna_unidad class="form-control" placeholder="Región" %}
+        <label for="course_name">Comuna</label>
+        {% render_field question1Form.region_unidad class="form-control" placeholder="Comuna" %}
+      </div>
+    
+      <div class="column" style="background-color:#aaa;">
+        <h2>Datos de la Póliza</h2>
+        <label for="course_name">Tipo de Póliza</label>
+        {% render_field question1Form.policy class="form-control" placeholder="Fiel cumplimiento" %}
+        <label for="course_name">Moneda</label>
+        {% render_field question1Form.moneda class="form-control" placeholder="Peso Chileno" %}
+        <label for="course_name">Glosa</label>
+        {% render_field question1Form.glosa class="form-control" placeholder="Glosa" %}
+        <label for="course_name">Monto Asegurado</label>
+        {% render_field question1Form.monto_asegurado class="form-control" placeholder="100000" %}
+        <label for="course_name">Vigencia desde</label>
+        {% render_field question1Form.vigencia_desde type="date" class="form-control" placeholder="mm/dd/yyyy" %}
+        <label for="course_name">Vigencia hasta</label>
+        {% render_field question1Form.vigencia_hasta type="date" class="form-control" placeholder="mm/dd/yyyy" %}
+      </div>
+      
+    </div>
+    
+    
+
+    <button type="submit" class="btn btn-primary" style="left: auto;">Enviar</button>
+  </form>
+   
+  <article>
+   
+    <div class="row info vcenter">
+        <div class="col-sm-16 col-md-11 col-lg-12">
+            <div class="row" style="text-align: left;">
+
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 16px;">Descripción:</span>
+                    <em>{{ users.Descripcion }}</em>
+                </div>
+                <br> <br>
+                
+            </div>
+        </div>
+    </div>
+</article>
+  <script>
+    document.getElementById('cmdRedirect').addEventListener('click', function(){
+          location.href = '/approve-request1/'+document.getElementById('txtVarX').value;
+               
+        });
+        
+    </script>
+
+<br><br><br><br>
+{% endblock content %} 

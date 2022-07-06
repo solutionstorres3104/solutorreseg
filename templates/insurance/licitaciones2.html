@@ -1,0 +1,123 @@
+<html>
+
+<head>
+  {% load static %}
+
+     <!-- Bootstrap navbar -->
+     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,300,400,700' rel='stylesheet' type='text/css'>
+    <!-- Styles -->
+    
+    <link href="{% static 'css/sicp.min.css'%}" rel="stylesheet" type="text/css">
+    
+        
+</head>
+     
+
+<body>
+ 
+{% include "insurance/navbar2.html" %}  
+
+<br><br>
+<div class="container text-center">
+
+       <h1 style="font-size: xx-large;">
+ Gestión Licitaciones Online 
+      </h1>
+</div> 
+
+
+
+<!-- Styles                                -->
+<div class="container">
+  
+<!-- Styles                                -->
+
+
+<div id="content" class="index no-h-overflow">
+<div class="row">  
+  <div class="col-sm-12" style="float: left;">
+    <section class="info-panel index" id="licitaciones-pendientes">
+  
+      <header>
+        <h2>Licitaciones abiertas por categoría</h2>
+
+        <div class="pull-right info-icon">
+            <span tabindex="0"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-html="true"
+                  data-trigger="hover"
+                  title="Información"
+                  data-content="<strong>Semana</strong> Es el total de los Resumen de Convocatorias pendientes en la semana en curso. <br>
+                  <strong>Mes</strong> Es el total de los Resumen de Convocatorias pendientes en el mes en curso. <br>
+                  <strong>Año</strong> Es el total de los Resumen de Convocatorias pendientes en el año en curso.">
+                  <i class="fa fa-info-circle fa-lg"></i>
+            </span>
+          </div>
+
+      </header>
+
+
+
+
+      <div class="info-panel-body">  
+
+        <div class="container" style= "float: left;">
+          <div class="info-panel-body-inner clearfix">
+           
+            <div class="tabla table-responsive">  
+              <table class="table table-striped table-bordered table-hover">
+                <thead> 
+                  <tr>
+                    <th>Licitación</th>
+                    <th>Nombre</th>
+                    <th>Cod/Estado</th>
+                    <th>Fec/Cierre</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for droplet in droplets %}
+                  <tr>
+                    <td style="font-size: small;">{{ droplet.CodigoExterno }}</td>
+                    <td style="font-size: small;">{{ droplet.Nombre }}</td>
+                    <td style="font-size: small;">{{ droplet.CodigoEstado }}</td>
+                    <td style="font-size: small;">{{ droplet.FechaCierre }}</td>
+                    <td><a class="btn btn-danger btn-xs" href="http://api.mercadopublico.cl/modules/ejemplo_08.aspx"><span class="glyphicon glyphicon-eye-open"></span></a></td> 
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div> 
+          </div>  
+        </div>
+      </div>
+     
+
+ 
+    </section>  
+      
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+</div>
+{% include "insurance/footer.html" %}
+
+  <!-- Bootstrap -->
+  <link href="{% static 'css/gestion.css' %}" rel="stylesheet" type="text/css">
+
+  <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+</body>
+
+</html>

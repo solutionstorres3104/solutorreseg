@@ -1,0 +1,54 @@
+{% include "insurance/navbar.html" %} 
+{% block content %}
+{% load static %}
+
+
+<div style="text-align: center;">
+    <div class="col-sm-9">
+        <div>
+            <article id="ads" class="media content-section" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div style="padding: 10px;">
+                    <div>
+                        <b id='business-name' style="color: black;font-size: 20px">ID Licitación: {{ users.CodigoExterno }}</b>
+                        <br>
+                        <b id='business-name' style="color: blue;font-size: 22px"> {{ users.Nombre }}</b>
+                    </div>
+                </div>
+
+                <li>
+                    <article>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                <div class="row" style="text-align: left;">
+
+                                    <div class="col-lg-12">
+                                        <span class="info-label" style="text-align: left; color: black; font-size: 16px;">Descripción:</span>
+                                        <em>{{ users.Descripcion }}</em>
+                                    </div>
+                                    <br> <br>
+                                    <div class="col-lg-12">
+                                        <b id='business-name' style="color: black;font-size: 14px">&nbsp;&nbsp; Monto Estimado&nbsp; &nbsp; Fecha de Publicación&nbsp; &nbsp; Fecha de Cierre</b>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <em>&nbsp; {{users.MontoEstimado}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{users.Fechas.FechaPublicacion}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{users.Fechas.FechaCierre}}&nbsp;({{users.DiasCierreLicitacion}}&nbsp; días para el cierre)</em>
+                                    </div>
+                                    <br> <br>
+                                    <div class="col-lg-12">
+                                        <b id='business-name' style="color: black;font-size: 14px">&nbsp;&nbsp;&nbsp;&nbsp; Organismo&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rut Unidad&nbsp; &nbsp; Nombre Unidad</b>
+                                    </div>    
+                                    <div class="col-lg-12">
+                                        <em>{{users.Comprador.NombreOrganismo}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{users.Comprador.RutUnidad}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{users.Comprador.NombreUnidad}}</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+
+            </article>
+        </div>
+     </div>
+</div>
+
+{% endblock content %}

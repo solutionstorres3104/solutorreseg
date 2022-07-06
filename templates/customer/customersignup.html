@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+{% load widget_tweaks %}
+{% block content %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+ 
+    {% include "insurance/navbar.html" %}
+ 
+<br><br><br>
+
+    
+   
+<h1 style="text-align: center;color: black;">REGISTRO DE CLIENTE</h1>
+
+  <form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {% csrf_token %}
+    <div class="form-row">
+      <div class="form-group col-md-6" style="color: red;">
+        <label for="username">Nombre de usuario</label>
+        {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="usuario" %}
+      </div>
+      <div class="form-group col-md-6" style="color: red;">
+        <label for="inputPassword4">Password</label>
+        {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="password" %}
+      </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6" style="color: red;">
+          <label for="first_name">Primer Nombre</label>
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="Primer nombre" %}
+        </div>
+        <div class="form-group col-md-6" style="color: red;">
+          <label for="last_name">Apellido</label>
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Apellido" %}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6" style="color: red;">
+          <label for="mobile">Teléfono(s)</label>
+          {% render_field customerForm.mobile|attr:'required:true'  class="form-control" placeholder="Teléfono(s)" %}
+        </div>
+        <div class="form-group col-md-6" style="color: red;">
+          <label for="address">Email</label>
+          {% render_field customerForm.address|attr:'required:true'  class="form-control" placeholder="Email" %}
+        </div>
+        
+        
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12" style="color: red;">
+          <label for="spsc">Rublo</label>
+          {% render_field customerForm.spsc|attr:'required:true' class="form-control" placeholder="Rublo al que pertenece el cliente" %}
+
+        </div>
+      </div>
+      <div class="border border-light p-3 mb-4">
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Registrarse</button>
+        </div>
+      </div>
+      
+  </form>
+
+<br><br>
+{% include "insurance/footer.html" %}
+  </body>
+</html>
+{% endblock content %} 

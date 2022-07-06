@@ -1,0 +1,90 @@
+{% extends 'customer/customerbase.html' %}
+{% load widget_tweaks %}
+ 
+{% block content %}
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 450px; /* Should be removed. Only for demonstration */
+      }
+      
+      /*  Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      </style>
+     
+      
+</head>
+
+
+<h2 style="text-align:center; color:blue;">Etapas y plazos</h2>
+
+<div style="text-align: left;">
+    <div class="col-sm-9">
+        <div>
+            <article id="ads" class="media content-section" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+               
+
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Fecha de Publicación:</span>
+                    <em>{{users.Fechas.FechaPublicacion}}</em>
+                </div>
+                
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Fecha inicio de preguntas:</span>
+                    <em>{{users.Fechas.FechaInicio}}</em>
+                </div>
+
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Fecha final de preguntas:</span>
+                    <em>{{users.Fechas.FechaFinal}}</em>
+                </div>
+
+                
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Fecha de publicación de respuestas:</span>
+                    <em>{{users.Fechas.FechaPubRespuestas}}</em>
+                </div>
+                
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Fecha de acto de apertura técnica:</span>
+                    <em>{{users.Fechas.FechaActoAperturaTecnica}}</em>
+                </div>
+                
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Fecha de acto de apertura económica (referencial): </span>
+                    <em>{{users.Fechas.FechaActoAperturaEconomica}}</em>
+                </div>
+                
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Fecha de Adjudicación:</span>
+                    <em>{{users.Fechas.FechaAdjudicacion}}</em>
+                </div>
+
+            </article>
+        </div>
+     </div>
+</div>
+
+
+
+
+{% endblock content %}

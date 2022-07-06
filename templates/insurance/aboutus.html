@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+	<head>
+ 		 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+		{% include "insurance/navbar.html" %}
+		<br><br>
+		<center>
+		  <h3 class='alert alert-success' style="margin-bottom:0px;">Sobre nosotros!</h3>
+		</center>
+		<div class="jumbotron text-center" style="margin-bottom: 0px;margin-top: 0px;">
+		  
+		  <p class="lead">“Every month that you send a check to the life insurance company, you're making a bet with them. Don't worry, one day you'll win.”</p>
+		  <hr class="my-4">
+		  <p>Explora nuestro sitio web.</p>
+		  <p class="lead">
+			<a class='button-main' href="/" role="button">INICIO</a>
+		  </p>
+		  <br><br><br><br>
+		</div>
+	  
+		{% include "insurance/footer.html" %}
+	   
+	  
+		<!-- Bootstrap -->
+		<script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+		<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+	
+	</body>
+	  
+</html>
+	  

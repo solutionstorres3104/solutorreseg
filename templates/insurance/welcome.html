@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS  <link rel="stylesheet" type="text/css" href="{% static 'post/main.css' %}"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    
+    <link href="{% static 'css/main.css'%}" rel="stylesheet" type="text/css">
+	{% if title %}
+		<title>SoluTorresSeguros - {{ title }}</title>
+	{% else %}
+		<title>SoluTorresSeguros</title>
+	{% endif %}
+</head>
+<body>
+	{% include "insurance/navbar.html" %}
+	    
+	
+	<section class="bg-image-full" style="background-image: url('{% static 'image/business-w1.jpg'%}');background-attachment:fixed;background-size: auto; ">
+      <div style="height: 400px;">
+      		<br><br>
+      		<div class="content col-sm-4"></div>
+      		<div class="content col-sm-4" style="background: rgba(0, 0, 0, 0.75);">
+    			<div>
+    				<br>
+	    			<h1 style="color: white" class="text-center">Bienvenidos a SoluTorresSeguros</h1>
+	    			<p style="color: white" class="text-center">Un lugar para atender todas tus necesidades e inquietudes</p>
+	    			
+	  				<br>
+    			</div>
+  			</div>
+      </div>
+    </section>
+    
+	<div id="services" class="container-fluid text-center">
+		  <h3>SERVICIOS</h3>
+		  <h4>Lo que ofrecemos</h4>
+		  <br>
+		  <div class="row slideanim">
+		    <div class="col-sm-4">
+		      <span class="glyphicon glyphicon-user" style="font-size: 30px"></span>
+		      <h4 style="color: black"><b>Soporte</b></h4>
+		      <p>SoluTorresSeguros es muy importante brindarte la mejor calidad en asistencia técnica. Si se te presentan dudas o inconvenientes referentes al manejo del software, acude a nuestro centro de soporte. </p>
+		    </div>
+		    <div class="col-sm-4">
+		      <span class="glyphicon glyphicon-send" style="font-size: 30px"></span>
+		      <h4 style="color: black"><b>Alertas por email</b></h4>
+		      <p>El servicio de alertas para clientes registrados permite recibir ofertas en el correo electrónico de los destinatarios tan pronto como se publique una adecuada..</p>
+		    </div>
+		    <div class="col-sm-4">
+		      <span class="glyphicon glyphicon-lock" style="font-size: 30px"></span>
+		      <h4 style="color: black"><b>Licitaciones Adjudicadas</b></h4>
+		      <p>Recibe notificaciones de los contratos que se han adjudicado y a qué empresas, dentro de tus áreas específicas de interés.</p>
+		    </div>
+			
+	  </div>
+	  <br>
+	</div>
+    <section class="py-5 bg-image-full" style="background-image: url('{% static 'image/bg3.png'%}');background-attachment: fixed;width: 100%;background-repeat:no-repeat;background-size: cover">
+      <div style="height: 430px;"></div>
+    </section>
+    <section class="py-5">
+    
+    	<div class="container">
+      		<br>
+       		 <h1 class="text-center">Nuestra visión</h1>
+       	 	<p class="text-center">Planeamos ayudar a las empresas y organizaciones proporcionando un portal para publicar ofertas y requisitos. Estos requisitos son rastreados por distribuidores/empresas de todo el mundo que, a su vez, proporcionan una cotización para asumir la tarea. Ayuda a subcontratar servicios como un requisito de "personal para proteger las instalaciones", "personal de limpieza", etc. y requisitos de productos como "computadoras y portátiles", "materiales de construcción", etc.</p>
+      		<br>
+      	</div>
+
+	
+
+		<div class=container>
+			{% if messages%}
+			{% for message in messages %}
+			<div class="alert alert-{{ message.tags }}">
+				{{ message }}
+			</div> 
+			{% endfor%}
+			{% endif %}
+			{% block content %}{% endblock%}
+		</div>
+	</section>
+	<!-- Footer -->
+	<footer class="page-footer font-small special-color-dark pt-4">
+		
+		<div style="background-color: #383838;color: white" class="footer-copyright text-center py-3">© 2018 Copyright:
+		  <a href="#">SoluTorres</a>
+		</div>
+		<!-- Copyright -->
+	  </footer>
+  
+</body>
+</html>

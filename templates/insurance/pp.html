@@ -1,0 +1,2325 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Buscador de Licitaciones</title>
+    <link rel="icon" type="image/x-icon" href="//static.dncp.gov.py/favicon.ico?v25"/>
+        
+    <link rel="stylesheet" href="//static.dncp.gov.py/assets/styles/sicp.min.css?v25"/>
+
+    
+    <!-- Begin Google Analytics Code -->
+    <script id="analytics">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-354142-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics Code -->
+
+    <style>body { display : none ; }</style>
+</head>
+<body>
+    
+    
+
+<header class="headerprincipal ">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-4 col-md-4 brandwrap bar-right">
+
+                <div class="brand">
+                    <a href="/" class="logo">Dirección Nacional de Contrataciones Públicas</a>
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-12 text-right">
+                <div class="pull-left logo-gobierno">
+                    <img src="//static.dncp.gov.py/assets/images/dncp/logos/logo_nacional_guarani.png?v25"
+                         class="" alt="Logo del Gobierno Nacional">
+                </div>
+
+                <div class="pull-left logo-gobierno">
+                    <img src="//static.dncp.gov.py/assets/images/dncp/logos/logo_py_gente_guarani.png?v25"
+                         class="logo-slogan" alt="Slogan 'Paraguay de la Gente'">
+                </div>
+
+                <div class="boton-sugerencias">
+                    <a class="btn clearfix" href="/mesa-de-ayuda.html"><i class="fa fa-edit"></i> <strong>Enviá tus consultas</strong><br /> a la mesa de ayuda</a>
+                </div>
+
+                <span class="tag" data-toggle="popover" data-content="Buscador" data-html="true" data-trigger="hover"
+                      data-placement="bottom">
+                    <a class="linktab collapsed" data-toggle="collapse" data-parent="#toptabs" href="#mainsearch"
+                       aria-expanded="false" aria-controls="toptabs">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </a>
+                </span>
+
+                <span class="tag" data-toggle="popover" data-content="Ingreso de Entidades y Proveedores"
+                      data-html="true" data-trigger="hover" data-placement="bottom">
+                    <a class="linktab" href="https://www.contrataciones.gov.py/sicp/login.seam"
+                       aria-expanded="false" aria-controls="toptabs">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </a>
+                </span>
+
+                                                                                                                                                             
+                                                                                                                                             
+                <a class="linktab collapsed menutoggle" data-toggle="collapse" data-parent="#toptabs"
+                   data-target="#nav-principal-dncp" aria-expanded="false" aria-controls="toptabs">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="panel-group" id="toptabs" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div id="mainsearch" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mainsearch">
+                <div class="panel-body">
+                    <div class="panel-centered">
+
+                        <div class="buscador-inicio">
+                            <form method="get" action="/buscador/general.html" class="form-horizontal">
+
+<h3>Buscador general </h3>
+<div class="form-group has-feedback searchbox">
+
+    <input type="text" id="1615683021" name="filtro" class="form-control input-lg form-control" placeholder="Buscar..." required="required" value="" />
+
+    <button type="submit" class="btn btn-primary searchbutton">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </button>
+</div>
+<br>
+
+<input type="hidden" id="page" name="page" /></form>
+                            <span class="helplink">Buscadores avanzados: </span>
+
+<span class="text-left">
+    <a href="/buscador/licitaciones.html" class="link">Buscador de Licitaciones</a>
+</span> |
+<span class="text-left">
+    <a href="/buscador/proveedores.html"
+       class="link">Buscador de Proveedores</a>
+</span> |
+
+<span class="text-left">
+    <a href="/buscador/contratos.html"
+       class="link">Buscador de Contratos</a>
+</span>
+        |
+<span class="text-left">
+    <a href="/buscador/marco-legal.html"
+       class="link">Marco Legal</a>
+</span>                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div id="loginbox" class="panel-collapse collapse" role="tabpanel" aria-labelledby="loginbox">
+                <div class="panel-body">
+                    <div class="panel-centered">
+                        <h3>Ingreso de Proveedores y entidades</h3>
+
+                        <div class="form-group">
+                            <label>Usuario:</label>
+                            <input type="text" id="usuario" name="usuario">
+                        </div>
+                        <div class="form-group">
+                            <label>Contraseña:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <div class="form-group">
+                            Si no recuerda su contraseña, ingrese <a href="#" class="helplink">aquí</a>.
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Ingresar" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div id="notifications" class="panel-collapse collapse" role="tabpanel" aria-labelledby="notifications">
+                <div class="panel-body">
+                    <div class="panel-centered">
+                        <h3>Notificaciones</h3>
+
+                        <p>Usted tiene <strong>3 notificaciones</strong></p>
+                        <ul class="list-group">
+                            <li class="list-group-item">Título de notificación principal <br>
+                                <small>Hace 5 minutos</small>
+                            </li>
+                            <li class="list-group-item">Título de notificación más largo que el principal <br>
+                                <small>Hace 3 horas</small>
+                            </li>
+                            <li class="list-group-item">Título de notif. corta <br>
+                                <small>Hace 8 horas</small>
+                            </li>
+                            <li class="list-group-item"><a href="#" class="btn btn-block btn-primary">Ver todas las
+                                    notificaciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+
+    
+    <nav title="Navegación Principal" class="navbar navbar-default">
+        <div class="container">
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="nav-principal-dncp">
+
+                                        <ul class="nav navbar-nav">
+            
+                <li icon="glyphicon glyphicon-home" class="first">            
+    <a href="/">
+        
+            <i class="glyphicon glyphicon-home"></i>
+        Inicio
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/dncp/institucional.html">
+        
+        Institucional
+
+            </a>
+        
+    </li>
+
+    
+                                    <li class="dropdown">            
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+        
+        Licitaciones
+
+                    <span class="caret"></span>
+            </a>
+                <ul class="dropdown-menu menu_level_1" role="menu">
+            
+                <li class="first">            
+    <a href="/buscador/licitaciones.html">
+        
+        Buscador de Licitaciones
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/buscador/contratos.html">
+        
+        Buscador de Contratos
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/dncp/ejogua.html">
+        
+        Tienda Virtual 
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/dncp/subasta-a-la-baja-electronica.html">
+        
+        Subasta a la Baja Electrónica
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="http://www.contrataciones.gov.py/convocantes.html">
+        
+        Listado de Instituciones Públicas
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="http://www.contrataciones.gov.py/buscador/audiencias.html">
+        
+        Audiencias Públicas
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/datos/visualizaciones/calendario_llamados/index.html" target="_blank">
+        
+        Calendario de Entrega de Ofertas
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/buscador/licitaciones-no-reguladas.html?marcas%5B%5D=alianza_publico_privada">
+        
+        Alianzas Público Privadas (APP)
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="http://www.contrataciones.gov.py/buscador/licitaciones-no-reguladas.html">
+        
+        Licitaciones no Reguladas por la Ley de Contrataciones Públicas
+
+            </a>
+        
+    </li>
+
+    
+                <li class="last">            
+    <a href="http://www.contrataciones.gov.py/buscador/intenciones-de-excepcion.html">
+        
+        Intenciones de Excepción con Difusión Posterior
+
+            </a>
+        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+    
+                                    <li class="dropdown">            
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+        
+        Proveedores
+
+                    <span class="caret"></span>
+            </a>
+                <ul class="dropdown-menu menu_level_1" role="menu">
+            
+                <li class="first">            
+    <a href="/dncp/sipe.html">
+        
+        Quiero ser Proveedor del Estado
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="http://www.contrataciones.gov.py/buscador/proveedores.html">
+        
+        Buscador de Proveedores
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="http://www.contrataciones.gov.py/buscador/contratos.html">
+        
+        Buscador de Contratos
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="http://www.contrataciones.gov.py/buscador/pagos-a-proveedores.html">
+        
+        Buscador de Pagos a Proveedores
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="http://www.contrataciones.gov.py/buscador/sanciones.html">
+        
+        Sanciones a Proveedores
+
+            </a>
+        
+    </li>
+
+    
+                <li class="last">            
+    <a href="http://www.hacienda.gov.py/web-hacienda/index.php?c=753" target="_blank">
+        
+        Calendario de Pagos del Ministerio de Hacienda
+
+            </a>
+        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+    
+                                    <li class="dropdown">            
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+        
+        Informaciones
+
+                    <span class="caret"></span>
+            </a>
+                <ul class="dropdown-menu menu_level_1" role="menu">
+            
+                <li class="first">            
+    <a href="/datos">
+        
+        Datos Abiertos
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="http://www.contrataciones.gov.py/buscador/contratos-verificados.html">
+        
+        Informes de Verificación de Contratos
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/dncp/reporte-de-ejecucion-contractual.html">
+        
+        Reporte de Ejecución de Contratos
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="http://www.contrataciones.gov.py/buscador/catalogo.html">
+        
+        Catálogo de Bienes y Servicios
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/informes/precios-productos-servicios-adjudicados.html">
+        
+        Historial de Precios Adjudicados
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/consulta-expediente.html">
+        
+        Seguimiento de Expedientes
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="https://www.contrataciones.gov.py/dncp/sie.html">
+        
+        Sistema de Información Estratégica (SIE)
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/dncp/compras-publicas-sostenibles.html">
+        
+        Compras Públicas Sostenibles
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="https://contrataciones.gov.py/revista">
+        
+        Revista de Compras Públicas
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/dncp/otros-portales-de-interes.html">
+        
+        Otros Portales de Interés
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="https://www.contrataciones.gov.py/dncp/covid-19.html">
+        
+        Informaciones sobre Covid-19
+
+            </a>
+        
+    </li>
+
+    
+                <li class="last">            
+    <a href="https://www.contrataciones.gov.py/dncp/construyendo-juntos-un-nuevo-sistema-de-compra-publica.html">
+        
+        Reforma del Sistema de Compras Públicas
+
+            </a>
+        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+    
+                                    <li class="dropdown">            
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+        
+        Servicios
+
+                    <span class="caret"></span>
+            </a>
+                <ul class="dropdown-menu menu_level_1" role="menu">
+            
+                <li class="first">            
+    <a href="/mboehara">
+        
+        Instituto Técnico Superior
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="https://www.contrataciones.gov.py/dncp/guias.html">
+        
+        Guías Online
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/mesa-de-ayuda.html">
+        
+        Mesa de Ayuda
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/dncp/preguntas-frecuentes.html">
+        
+        Preguntas Frecuentes
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/denuncia/default.do">
+        
+        Denuncias
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="/dncp/tramites-juridicos-electronicos.html">
+        
+        Trámites Jurídicos Electrónicos
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="https://www.contrataciones.gov.py/reclamo.html">
+        
+        Reclamos y quejas 
+
+            </a>
+        
+    </li>
+
+    
+                <li>            
+    <a href="https://www.contrataciones.gov.py/stje-cliente/public/avenimientos/escrito_de_avenimiento_edit.html">
+        
+        Avenimientos
+
+            </a>
+        
+    </li>
+
+    
+                <li class="last">            
+    <a href="https://www.contrataciones.gov.py/foro/" target="_blank">
+        
+        Foro Online
+
+            </a>
+        
+    </li>
+
+
+    </ul>
+
+    </li>
+
+    
+                <li class="last">            
+    <a href="/buscador/marco-legal.html">
+        
+        Marco Legal
+
+            </a>
+        
+    </li>
+
+
+    </ul>
+</div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+    <div class="container-fluid breadcrumb hidden-xs">
+        <div class="container">
+            
+    <ol class="breadcrumb navbar-left" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+        <li>Usted está aquí:</li>
+                    <li itemprop="child">
+                                <a href="/" itemprop="url">
+                                        <span itemprop="title">Inicio</span>
+                    </a>            </li>
+                    <li class="active" itemprop="child">
+                                    <span itemprop="title">Licitaciones: Buscador de Licitaciones</span>
+                                </li>
+            </ol>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+                <div class="page-header clearfix">
+            <h1>Buscador de Licitaciones</h1>
+            <div class="logo-right">
+                
+            </div>
+        </div>
+
+        
+
+    
+
+    
+
+    
+
+    
+
+                
+        <div id="content">
+            
+    <div class="row aside-left">
+
+    <div class="col-md-4">
+        <aside >
+                            <h2>Criterios de Búsqueda</h2>
+
+            
+<form method="get">
+
+
+
+<div class="form-group"><label class="control-label" for="nro_nombre_licitacion">ID/Nombre de Licitación</label><input type="text" id="nro_nombre_licitacion" name="nro_nombre_licitacion" class="form-control" /></div>
+<div class="form-group"><label class="control-label" for="categorias">Categoría</label>        <div class="input-group select2-bootstrap-append">
+    
+    <select id="categorias" name="categorias[]" class="select2 form-control" multiple="multiple"><option value="17">1 - Pasajes y Transportes</option><option value="18">2 - Servicios de Limpiezas, Mantenimientos y reparaciones menores y mayores de Instalaciones, Maquinarias y Vehículos</option><option value="19">3 - Adquisición y Locación de inmuebles. Alquiler de muebles</option><option value="20">4 - Capacitaciones y Adiestramientos</option><option value="21">5 - Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión</option><option value="22">6 - Seguros</option><option value="23">7 - Servicios Técnicos</option><option value="24">8 - Publicidad y Propaganda</option><option value="25">9 - Servicios de ceremonial, gastronomico y funerarios</option><option value="26">10 - Textiles, vestuarios y calzados</option><option value="27">11 - Utiles de oficina, Productos de papel y cartón e impresos</option><option value="28">12 - Elementos e insumos de limpieza</option><option value="29">13 - Utensilios de cocina y comedor, Productos de Porcelana, vidrio y loza</option><option value="30">14 - Productos Alimenticios</option><option value="31">15 - Combustibles y Lubricantes</option><option value="32">16 - Productos quimicos</option><option value="33">17 - Equipos, Productos e instrumentales Médicos y de Laboratorio. Servicios asistenciales de salud</option><option value="34">18 - Materiales e insumos eléctricos, metálicos y no metálicos, Plásticos, cauchos. Repuestos, herramientas, cámaras y cubiertas.</option><option value="35">19 - Bienes e insumos agropecuario y forestal</option><option value="36">20 - Minerales</option><option value="37">21 - Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles</option><option value="38">22 - Maquinarias, Equipos y herramientas mayores - Equipos de transporte</option><option value="39">23 - Muebles y Enseres</option><option value="40">24 - Equipos, accesorios y programas computacionales, de oficina, educativos, de imprenta, de comunicación y señalamiento</option><option value="41">25 - Equipos Militares y de Seguridad. Servicio de Seguridad y Vigilancia</option></select>
+
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="categorias">
+                <span class="glyphicon glyphicon-list naranja"></span>
+            </button>
+        </span>
+        </div>
+    </div>
+<div class="form-group"><label class="control-label" for="tipos_procedimiento">Tipo de Procedimiento</label>        <div class="input-group select2-bootstrap-append">
+    
+    <select id="tipos_procedimiento" name="tipos_procedimiento[]" class="select2 form-control" multiple="multiple"><option value="3CV">3CV - Selección sobre la base la comparación de las calificaciones </option><option value="AI">AI - Acuerdo Internacional</option><option value="AN">AN - Acuerdo Nacional</option><option value="CD">CD - Contratación Directa</option><option value="CE">CE - Contratación por Excepción</option><option value="CO">CO - Concurso de Ofertas</option><option value="EE">EE - Contrataciones Entre Entidades del Estado</option><option value="EX">EX - Contrataciones Excluidas</option><option value="LC">LC - Locación de Inmuebles</option><option value="LCO">LCO - LCO_DNCP_BID - LICITACIÓN DE CONCURSO DE OFERTA SISTEMA NACIONAL BID BIENES NO COMUNES</option><option value="LPI">LPI - Licitación Pública Internacional</option><option value="LPN">LPN - Licitación Pública Nacional</option><option value="PC">PC - Proceso de Capacitación</option><option value="SBC">SBC - Selección basada en la calidad </option><option value="SBCC">SBCC - Selección basada en la calidad y el costo </option><option value="SBMC">SBMC - Selección basada en el menor costo </option><option value="SBPF">SBPF - Selección cuando el presupuesto es fijo </option><option value="SCC">SCC - Selección basada en las calificaciones de los consultores </option><option value="SSF">SSF - Selección con base en una sola fuente </option></select>
+
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="tipos_procedimiento">
+                <span class="glyphicon glyphicon-list naranja"></span>
+            </button>
+        </span>
+        </div>
+    </div>
+<div class="form-group"><label class="control-label" for="convocantes">Convocante</label>        <div class="input-group select2-bootstrap-append">
+    
+    <select id="convocantes" name="convocantes[]" class="form-control" multiple="multiple"><option value="167">Administración Nacional de Electricidad (ANDE)</option><option value="169">Administración Nacional de Navegación y Puertos (ANNP)</option><option value="316">Agencia Financiera de Desarrollo (AFD)</option><option value="359">Agencia Nacional de Transito y Seguridad Vial (ANTSV)</option><option value="358">Ag. Nac. de Eval. y Acreditación de la Educación Superior (ANEAES)</option><option value="1019">Auditoria General del Poder Ejecutivo (AGPE) / Presidencia de la República</option><option value="363">Autoridad Reguladora Radiologica y Nuclear (ARRN)</option><option value="39">Banco Central del Paraguay (BCP)</option><option value="202">Banco Nacional de Ahorro y Prestamo para la Vivienda (BANAVI)</option><option value="191">Banco Nacional de Fomento (BNF)</option><option value="162">Caja de Jubilaciones y Pensiones de Empleados de Bancarios (CAJ.BANC.)</option><option value="159">Caja de Jubilaciones y Pensiones del Personal de la Ande (CAJA ANDE)</option><option value="163">Caja de Jubilaciones y Pensiones del Personal Municipal (CAJ.MUNIC.)</option><option value="222">Caja de Préstamos del Ministerio de Defensa Nacional (CAJA MDN)</option><option value="158">Caja de Seguridad Social de Empleados y Obreros Ferroviarios (CAJ.FERROV)</option><option value="43">Cañas Paraguayas S.A. (CAPASA)</option><option value="1597">Centro Cultural de la Republica - El Cabildo / Congreso Nacional</option><option value="1918">Circunscripción Judicial del Dpto. Alto Paraguay / Corte Suprema de Justicia</option><option value="1407">Circunscripción Judicial del Dpto. Alto Parana / Corte Suprema de Justicia</option><option value="1408">Circunscripción Judicial del Dpto. Amambay / Corte Suprema de Justicia</option><option value="1377">Circunscripción Judicial del Dpto. Caaguazu / Corte Suprema de Justicia</option><option value="1379">Circunscripción Judicial del Dpto. Caazapa / Corte Suprema de Justicia</option><option value="1602">Circunscripción Judicial del Dpto. Canindeyu / Corte Suprema de Justicia</option><option value="1870">Circunscripción Judicial del Dpto. Central / Corte Suprema de Justicia</option><option value="1411">Circunscripción Judicial del Dpto. Concepción / Corte Suprema de Justicia</option><option value="1412">Circunscripción Judicial del Dpto. Encarnación / Corte Suprema de Justicia</option><option value="1500">Circunscripción Judicial del Dpto. Guaira / Corte Suprema de Justicia</option><option value="1409">Circunscripción Judicial del Dpto. Misiones / Corte Suprema de Justicia</option><option value="1410">Circunscripción Judicial del Dpto. Ñeembucu / Corte Suprema de Justicia</option><option value="1667">Circunscripción Judicial del Dpto. Paraguarí / Corte Suprema de Justicia</option><option value="1523">Circunscripción Judicial del Dpto. San Pedro / Corte Suprema de Justicia</option><option value="1519">Colegio Experimental Paraguay - Brasil (CEPB) / Universidad Nacional de Asunción</option><option value="1026">Comando de la Armada Uoc 3 / Ministerio de Defensa Nacional</option><option value="1027">Comando de la Fuerza Aerea Uoc 4 / Ministerio de Defensa Nacional</option><option value="1025">Comando del Ejercito Uoc 2 / Ministerio de Defensa Nacional</option><option value="1024">Comando en Jefe Uoc 1 / Ministerio de Defensa Nacional</option><option value="1389">Comando Logistico / Ministerio de Defensa Nacional</option><option value="1028">Comando Logistico Uoc 5 / Ministerio de Defensa Nacional</option><option value="348">Comisión Nac. de Prevención contra la Tortura y Otros Tratos</option><option value="362">Comisión Nacional de Competencia (CONACOM)</option><option value="137">Comisión Nacional de Telecomunicaciones (CONATEL)</option><option value="136">Comisión Nacional de Valores (CNV)</option><option value="309">Compañía Paraguaya de Comunicaciones (COPACO)</option><option value="298">Congreso Nacional (C.N.)</option><option value="30">Consejo de la Magistratura (C.M.)</option><option value="1014">Consejo Nacional de Ciencia y Tecnología (CONACYT) / Presidencia de la República</option><option value="360">Consejo Nacional de Educación Superior (CONES)</option><option value="31">Contraloría General de la República (C.G.R.)</option><option value="21">Corte Suprema de Justicia (CSJ)</option><option value="220">Crédito Agrícola de Habilitación (CAH)</option><option value="32">Defensoría del Pueblo</option><option value="1016">Diben (DIBEN) / Presidencia de la República</option><option value="107">Dirección de Beneficencia (DIBEN)</option><option value="1007">Dirección General de Estadisticas Encuestas y Censo (DGEEC) / Presidencia de la República</option><option value="1722">Direccion General de Informacion Estrategica de Salud Digies-Sinais / Ministerio de Salud Pública y Bienestar Social</option><option value="1895">Direccion General del Registro del Estado Civil / Ministerio de Justicia </option><option value="1382">Direccion General de Migraciones / Ministerio del Interior</option><option value="1600">Direccion General de Salud Ambiental (DIGESA) / Ministerio de Salud Pública y Bienestar Social</option><option value="308">Dirección Nacional de Aduanas (DNA)</option><option value="178">Dirección Nacional de Aeronáutica Civil (DINAC)</option><option value="326">Dirección Nacional de Contrataciones Públicas (DNCP)</option><option value="338">Dirección Nacional de Correos del Paraguay (DINACOPA)</option><option value="377">Dirección Nacional de Defensa, Salud y Bienestar Animal (DNDSBA)</option><option value="352">Direccion Nacional de Propiedad Intelectual (DINAPI)</option><option value="138">Direccion Nacional de Transporte (DINATRAN)</option><option value="18">Empresa de Servicios Sanitarios del Paraguay (ESSAP)</option><option value="144">Ente Regulador de Servicios Sanitarios (ERSSAN)</option><option value="1015">Escribania Mayor de Gobierno / Presidencia de la República</option><option value="1040">Fac. de Ing. Agronomica / Universidad Nacional del Este</option><option value="1367">Facultad de Arquitectura / Universidad Nacional de Asunción</option><option value="1365">Facultad de Ciencias Agrarias / Universidad Nacional de Asunción</option><option value="1346">Facultad de Ciencias Agropecuarias y Desarrollo Rural / Universidad Nacional de Pilar</option><option value="1349">Facultad de Ciencias Aplicadas / Universidad Nacional de Pilar</option><option value="1345">Facultad de Ciencias Contables, Administrativas y Economicas / Universidad Nacional de Pilar</option><option value="1677">Facultad de Ciencias de la Producción / Universidad Nacional de Caaguazu</option><option value="1042">Facultad de Ciencias de la Salud / Universidad Nacional del Este</option><option value="1362">Facultad de Ciencias Economicas / Universidad Nacional de Asunción</option><option value="1676">Facultad de Ciencias Economicas / Universidad Nacional de Caaguazu</option><option value="1038">Facultad de Ciencias Economicas / Universidad Nacional del Este</option><option value="1368">Facultad de Ciencias Exactas y Naturales / Universidad Nacional de Asunción</option><option value="1360">Facultad de Ciencias Medicas / Universidad Nacional de Asunción</option><option value="1373">Facultad de Ciencias Quimicas / Universidad Nacional de Asunción</option><option value="1678">Facultad de Ciencias Sociales y Politicas / Universidad Nacional de Caaguazu</option><option value="1710">Facultad de Ciencias Tecnologicas / Universidad Nacional de Caaguazu</option><option value="1366">Facultad de Ciencias Veterinarias / Universidad Nacional de Asunción</option><option value="1283">Facultad de Derecho y Ciencias Politicas / Universidad Nacional de Pilar</option><option value="1359">Facultad de Derecho y Ciencias Sociales / Universidad Nacional de Asunción</option><option value="1041">Facultad de Derecho y Ciencias Sociales / Universidad Nacional del Este</option><option value="1521">Facultad de enfermería y obstetricia de la Universidad Nacional de Asunción  / Universidad Nacional de Asunción</option><option value="1679">Facultad de Enfermeria y Obstetricia / Universidad Nacional de Caaguazu</option><option value="1364">Facultad de Filosofia / Universidad Nacional de Asunción</option><option value="1037">Facultad de Filosofia / Universidad Nacional del Este</option><option value="1348">Facultad de Humanidades y Ciencias de la Educacion / Universidad Nacional de Pilar</option><option value="1361">Facultad de Ingenieria / Universidad Nacional de Asunción</option><option value="1680">Facultad de Medicina / Universidad Nacional de Caaguazu</option><option value="1782">Facultad de Odontologia Santo Tomas de Aquino / Universidad Nacional de Caaguazu</option><option value="1363">Facultad de Odontologia / Universidad Nacional de Asunción</option><option value="1369">Facultad Politecnica / Universidad Nacional de Asunción</option><option value="1036">Facultad Politecnica / Universidad Nacional del Este</option><option value="19">Ferrocarriles del Paraguay S.A. (FEPASA)</option><option value="225">Fondo de Desarrollo Campesino (FDC)</option><option value="221">Fondo Ganadero (FG.)</option><option value="125">Fondo Nacional de la Cultura y las Artes (FONDEC)</option><option value="1029">Fuerzas Militares Uoc 6 / Ministerio de Defensa Nacional</option><option value="1001">Gabinete Civil / Presidencia de la República</option><option value="1002">Gabinete Militar / Presidencia de la República</option><option value="92">Gobierno Departamental de Alto Paraguay (GOBALTOPY)</option><option value="80">Gobierno Departamental de Alto Paraná (A.PARANÁ)</option><option value="87">Gobierno Departamental de Amambay (AMAMBAY)</option><option value="98">Gobierno Departamental de Boquerón</option><option value="62">Gobierno Departamental de Caaguazú (CAAGUAZÚ)</option><option value="68">Gobierno Departamental de Caazapá (CAAZAPÁ)</option><option value="90">Gobierno Departamental de Canindeyú (CANINDEYÚ)</option><option value="81">Gobierno Departamental de Central (CENTRAL)</option><option value="40">Gobierno Departamental de Concepción (CONCEPCIÓN)</option><option value="51">Gobierno Departamental de Cordillera (CORDILLERA)</option><option value="61">Gobierno Departamental de Guairá (GUAIRÁ)</option><option value="69">Gobierno Departamental de Itapua (ITAPÚA)</option><option value="77">Gobierno Departamental de Misiones (MISIONES)</option><option value="82">Gobierno Departamental de Ñeembucú (ÑEEMBUCÚ)</option><option value="78">Gobierno Departamental de Paraguarí (PARAGUARÍ)</option><option value="91">Gobierno Departamental de Presidente Hayes (PTE.HAYES)</option><option value="50">Gobierno Departamental de San Pedro (S.PEDRO)</option><option value="300">Honorable Cámara de Diputados (DIPUTADOS)</option><option value="297">Honorable Cámara de Senadores</option><option value="1445">Hospital de Barrio Obrero / Ministerio de Salud Pública y Bienestar Social</option><option value="1485">Hospital General Pediátrico Niños de Acosta Ñu / Ministerio de Salud Pública y Bienestar Social</option><option value="1684">Hospital Nacional  / Ministerio de Salud Pública y Bienestar Social</option><option value="189">Industria Nacional del Cemento (INC)</option><option value="157">Instituto de Previsión Social (IPS)</option><option value="1807">Instituto de Trabajo Social / Universidad Nacional de Asunción</option><option value="335">Instituto Forestal Nacional (INFONA)</option><option value="1717">Instituto Nacional de Alimentación y Nutrición (INAN) / Ministerio de Salud Pública y Bienestar Social</option><option value="145">Instituto Nacional de Cooperativismo (INCOOP)</option><option value="106">Instituto Nacional de Desarrollo Rural y de la Tierra (INDERT)</option><option value="373">Instituto Nacional de Educación Superior &quot;Dr. Raul Peña&quot; (INAES)</option><option value="379">Instituto Nacional de Estadística (INE)</option><option value="386">Instituto Nacional del Audiovisual Paraguayo (INAP)</option><option value="1431">Instituto Nacional del Cancer / Ministerio de Salud Pública y Bienestar Social</option><option value="104">Instituto Nacional de Tecnología, Normalización y Metrología (INTN)</option><option value="311">Instituto Paraguayo de Artesania (IPA)</option><option value="123">Instituto Paraguayo del Indígena (INDI)</option><option value="337">Instituto Paraguayo de Tecnologia Agraria (IPTA)</option><option value="374">Instituto Superior de Bellas Artes (ISBA)</option><option value="332">Jurado de Enjuiciamiento de Magistrados (JEM)</option><option value="12">Ministerio de Agricultura y Ganadería (MAG)</option><option value="304">Ministerio de Defensa Nacional (MDN)</option><option value="372">Ministerio de Desarrollo Social (MDS)</option><option value="1">Ministerio de Educación y Ciencias (MEC)</option><option value="305">Ministerio de Hacienda</option><option value="13">Ministerio de Industria y Comercio (MIC)</option><option value="11">Ministerio de Justicia  (MJ)</option><option value="342">Ministerio de la Defensa Pública - Defensoría (MDP)</option><option value="336">Ministerio del Ambiente y Desarrollo Sostenible (MADES)</option><option value="347">Ministerio de la Mujer (MM)</option><option value="371">Ministerio de la Niñez y la Adolescencia (MINNA)</option><option value="299">Ministerio del Interior (M.I.)</option><option value="20">Ministerio de Obras Públicas y Comunicaciones (MOPC)</option><option value="303">Ministerio de Relaciones Exteriores (MRE)</option><option value="306">Ministerio de Salud Pública y Bienestar Social (MSPBS)</option><option value="375">Ministerio de Tecnologías de la Información y Comunicación (MITIC)</option><option value="355">Ministerio de Trabajo, Empleo y Seguridad Social (MTESS)</option><option value="105">Ministerio de Urbanismo, Vivienda y Habitat (MUVH)</option><option value="25">Ministerio Público - Fiscalía (FGE)</option><option value="246">Municipalidad de 25 de Diciembre</option><option value="52">Municipalidad de 3 de Febrero</option><option value="349">Municipalidad de 3 de Mayo</option><option value="228">Municipalidad de Acahay</option><option value="103">Municipalidad de Alberdi</option><option value="266">Municipalidad de Altos</option><option value="127">Municipalidad de Alto Verá</option><option value="247">Municipalidad de Antequera</option><option value="64">Municipalidad de Aregua</option><option value="369">Municipalidad de Arroyito</option><option value="267">Municipalidad de Arroyos y Esteros</option><option value="108">Municipalidad de Asunción</option><option value="268">Municipalidad de Atyra</option><option value="93">Municipalidad de Avaí</option><option value="211">Municipalidad de Ayolas</option><option value="341">Municipalidad de Azotey</option><option value="319">Municipalidad de Bahía Negra</option><option value="240">Municipalidad de Belén</option><option value="180">Municipalidad de Bella Vista - Amambay</option><option value="128">Municipalidad de Bella Vista - Itapúa</option><option value="7">Municipalidad de Benjamín Aceval</option><option value="380">Municipalidad de Boquerón</option><option value="286">Municipalidad de Borja</option><option value="94">Municipalidad de Buena Vista</option><option value="269">Municipalidad de Caacupé</option><option value="53">Municipalidad de Caaguazú</option><option value="229">Municipalidad de Caapucú</option><option value="96">Municipalidad de Caazapá</option><option value="129">Municipalidad de Cambyretá</option><option value="383">Municipalidad de Campo Aceval</option><option value="65">Municipalidad de Capiatá</option><option value="248">Municipalidad de Capiibary</option><option value="182">Municipalidad de Capitán Bado</option><option value="130">Municipalidad de Capitán Meza</option><option value="131">Municipalidad de Capitán Miranda</option><option value="270">Municipalidad de Caraguatay</option><option value="244">Municipalidad de Carapeguá</option><option value="54">Municipalidad de Carayaó</option><option value="132">Municipalidad de Cárlos Antonio López</option><option value="331">Municipalidad de Carmelo Peralta</option><option value="133">Municipalidad de Carmen del Paraná</option><option value="146">Municipalidad de Cerrito</option><option value="381">Municipalidad de Cerro Cora</option><option value="249">Municipalidad de Choré</option><option value="196">Municipalidad de Ciudad del Este</option><option value="241">Municipalidad de Concepción</option><option value="134">Municipalidad de Coronel Bogado</option><option value="288">Municipalidad de Coronel Martínez</option><option value="55">Municipalidad de Coronel Oviedo</option><option value="184">Municipalidad de Corpus Christi</option><option value="147">Municipalidad de Desmochados</option><option value="197">Municipalidad de Domingo Martínez de Irala</option><option value="289">Municipalidad de Dr. Bottrell</option><option value="56">Municipalidad de Dr. Cecilio Báez</option><option value="351">Municipalidad de Dr. Raul Peña</option><option value="135">Municipalidad de Edelira</option><option value="271">Municipalidad de Emboscada</option><option value="140">Municipalidad de Encarnación</option><option value="257">Municipalidad de Escobar</option><option value="272">Municipalidad de Eusebio Ayala</option><option value="290">Municipalidad de Félix Pérez Cardozo</option><option value="66">Municipalidad de Fernando de la Mora</option><option value="320">Municipalidad de Filadelfia</option><option value="141">Municipalidad de Fram</option><option value="15">Municipalidad de Fuerte Olimpo</option><option value="114">Municipalidad de Fulgencio Yegros</option><option value="142">Municipalidad de General Artigas</option><option value="143">Municipalidad de General Delgado</option><option value="238">Municipalidad de Gral. Bernardino Caballero</option><option value="250">Municipalidad de Gral. Elizardo Aquino</option><option value="291">Municipalidad de Gral. Eugenio A. Garay</option><option value="185">Municipalidad de Gral. Francisco Caballero Alvarez</option><option value="251">Municipalidad de Gral. Francisco I. Resquin</option><option value="110">Municipalidad de Gral. Higinio Morínigo</option><option value="148">Municipalidad de Gral. José Eduvigis Díaz</option><option value="339">Municipalidad de Gral Jose M. Bruguez</option><option value="252">Municipalidad de Guajayvi</option><option value="67">Municipalidad de Guarambaré</option><option value="149">Municipalidad de Guazu Cuá</option><option value="199">Municipalidad de Hernandarias</option><option value="160">Municipalidad de Hohenau</option><option value="242">Municipalidad de Horqueta</option><option value="150">Municipalidad de Humaitá</option><option value="292">Municipalidad de Independencia</option><option value="200">Municipalidad de Iruña</option><option value="273">Municipalidad de Isla Pucú</option><option value="151">Municipalidad de Isla Umbú</option><option value="79">Municipalidad de Itá</option><option value="274">Municipalidad de Itacurubí de las Cordilleras</option><option value="253">Municipalidad de Itacurubí del Rosario</option><option value="201">Municipalidad de Itakyry</option><option value="186">Municipalidad de Itanará</option><option value="293">Municipalidad de Itapé</option><option value="161">Municipalidad de Itapúa Poty</option><option value="88">Municipalidad de Itaugua</option><option value="294">Municipalidad de Iturbe</option><option value="89">Municipalidad de J. Augusto Saldivar</option><option value="170">Municipalidad de Jesús</option><option value="59">Municipalidad de José Domingo Ocampos</option><option value="9">Municipalidad de José Falcón</option><option value="295">Municipalidad de José Fassardi</option><option value="171">Municipalidad de José Leandro Oviedo</option><option value="275">Municipalidad de Juan de Mena</option><option value="223">Municipalidad de Juan E. O&#039;Leary</option><option value="57">Municipalidad de Juan Eulogio Estigarribia</option><option value="198">Municipalidad de Juan León Mallorquín</option><option value="58">Municipalidad de Juan Manuel Frutos</option><option value="364">Municipalidad de Karapai</option><option value="187">Municipalidad de Katuete</option><option value="75">Municipalidad de la Colmena</option><option value="99">Municipalidad de Lambaré</option><option value="188">Municipalidad de la Paloma del Espiritu Santo</option><option value="60">Municipalidad de la Pastora</option><option value="172">Municipalidad de la Paz</option><option value="382">Municipalidad de Laurel</option><option value="152">Municipalidad de Laureles</option><option value="343">Municipalidad de Liberacion</option><option value="254">Municipalidad de Lima</option><option value="100">Municipalidad de Limpio</option><option value="276">Municipalidad de Loma Grande</option><option value="321">Municipalidad de Loma Plata</option><option value="243">Municipalidad de Loreto</option><option value="224">Municipalidad de los Cedrales</option><option value="101">Municipalidad de Luque</option><option value="111">Municipalidad de Maciel</option><option value="367">Municipalidad de Maracaná</option><option value="365">Municipalidad de Maria Antonia</option><option value="102">Municipalidad de Mariano Roque Alonso</option><option value="287">Municipalidad de Mauricio José Troche</option><option value="153">Municipalidad de Mayor José D. Martinez</option><option value="173">Municipalidad de Mayor Otaño</option><option value="232">Municipalidad de Mbaracayú</option><option value="296">Municipalidad de Mbocayaty del Guairá</option><option value="277">Municipalidad de Mbocayaty del Yhaguy</option><option value="95">Municipalidad de Mbuyapey</option><option value="70">Municipalidad de Mcal. Francisco Solano López</option><option value="17">Municipalidad de Mcal Jose Félix Estigarribia</option><option value="233">Municipalidad de Minga Guazú</option><option value="234">Municipalidad de Minga Porá</option><option value="109">Municipalidad de Moisés Bertoni</option><option value="236">Municipalidad de Ñacunday</option><option value="8">Municipalidad de Nanawa</option><option value="235">Municipalidad de Naranjal</option><option value="33">Municipalidad de Natalicio Talavera</option><option value="174">Municipalidad de Natalio</option><option value="41">Municipalidad de Ñemby</option><option value="175">Municipalidad de Nueva Alborada</option><option value="278">Municipalidad de Nueva Colombia</option><option value="190">Municipalidad de Nueva Esperanza</option><option value="255">Municipalidad de Nueva Germania</option><option value="116">Municipalidad de Nueva Italia</option><option value="71">Municipalidad de Nueva Londres</option><option value="346">Municipalidad de Nueva Toledo</option><option value="34">Municipalidad de Ñumi</option><option value="176">Municipalidad de Obligado</option><option value="26">Municipalidad de Paraguarí</option><option value="354">Municipalidad de Paso Barreto</option><option value="154">Municipalidad de Paso de Patria</option><option value="385">Municipalidad de Paso Horqueta</option><option value="35">Municipalidad de Paso Yobai</option><option value="183">Municipalidad de Pedro Juan Caballero</option><option value="155">Municipalidad de Pilar</option><option value="203">Municipalidad de Pirapó</option><option value="27">Municipalidad de Pirayú</option><option value="279">Municipalidad de Piribebuy</option><option value="44">Municipalidad de Presidente Franco</option><option value="280">Municipalidad de Primero de Marzo</option><option value="376">Municipalidad de Puerto Adela</option><option value="16">Municipalidad de Puerto Casado</option><option value="10">Municipalidad de Puerto Pinasco</option><option value="28">Municipalidad de Quiindy</option><option value="29">Municipalidad de Quyquyho</option><option value="73">Municipalidad de Raúl Arsenio Oviedo</option><option value="74">Municipalidad de Repatriación</option><option value="72">Municipalidad de R.I. 3 Corrales</option><option value="2">Municipalidad de Salto del Guairá</option><option value="45">Municipalidad de San Alberto</option><option value="357">Municipalidad de San Alfredo</option><option value="117">Municipalidad de San Antonio</option><option value="281">Municipalidad de San Bernardino</option><option value="329">Municipalidad de San Carlos del Apa</option><option value="204">Municipalidad de San Cosme y Damián</option><option value="46">Municipalidad de San Cristobal</option><option value="256">Municipalidad de San Estanislao</option><option value="212">Municipalidad de San Ignacio</option><option value="97">Municipalidad de San Joaquín</option><option value="76">Municipalidad de San José de los Arroyos</option><option value="384">Municipalidad de San Jose Del Rosario</option><option value="282">Municipalidad de San José Obrero</option><option value="213">Municipalidad de San Juan Bautista</option><option value="156">Municipalidad de San Juan Bautista Ñeembucu</option><option value="205">Municipalidad de San Juan del Paraná</option><option value="112">Municipalidad de San Juan Nepomuceno</option><option value="239">Municipalidad de San Lázaro</option><option value="118">Municipalidad de San Lorenzo</option><option value="214">Municipalidad de San Miguel</option><option value="258">Municipalidad de San Pablo</option><option value="215">Municipalidad de San Patricio</option><option value="206">Municipalidad de San Pedro del Paraná</option><option value="259">Municipalidad de San Pedro del Ycuamandiyú</option><option value="207">Municipalidad de San Rafael del Paraná</option><option value="310">Municipalidad de San Roque González de Santa Cruz</option><option value="36">Municipalidad de San Salvador</option><option value="283">Municipalidad de Santa Elena</option><option value="47">Municipalidad de Santa Fé del Paraná</option><option value="216">Municipalidad de Santa María</option><option value="48">Municipalidad de Santa Rita</option><option value="260">Municipalidad de Santa Rosa del Aguaray</option><option value="83">Municipalidad de Santa Rosa del Mbutuy</option><option value="49">Municipalidad de Santa Rosa del Monday</option><option value="217">Municipalidad de Santa Rosa Misiones</option><option value="218">Municipalidad de Santiago</option><option value="366">Municipalidad de San Vicente Pancholo</option><option value="177">Municipalidad de Sapucai</option><option value="361">Municipalidad de Sargento Jóse Félix López</option><option value="84">Municipalidad de Simón Bolivar</option><option value="164">Municipalidad de Tacuaras</option><option value="261">Municipalidad de Tacuatí</option><option value="113">Municipalidad de Tavaí</option><option value="345">Municipalidad de Tavapy</option><option value="327">Municipalidad de Tebicuary</option><option value="192">Municipalidad de Tebicuarymi</option><option value="328">Municipalidad de Tembiapora</option><option value="284">Municipalidad de Tobatí</option><option value="208">Municipalidad de Tomás Romero Pereira</option><option value="209">Municipalidad de Trinidad</option><option value="330">Municipalidad de Tte Esteban Martinez</option><option value="318">Municipalidad de Tte Irala Fernandez</option><option value="262">Municipalidad de Unión</option><option value="285">Municipalidad de Valenzuela</option><option value="85">Municipalidad de Vaquería</option><option value="3">Municipalidad de Villa Curuguaty</option><option value="263">Municipalidad de Villa del Rosario</option><option value="119">Municipalidad de Villa Elisa</option><option value="219">Municipalidad de Villa Florida</option><option value="165">Municipalidad de Villa Franca</option><option value="14">Municipalidad de Villa Hayes</option><option value="168">Municipalidad de Villalbín</option><option value="166">Municipalidad de Villa Oliva</option><option value="37">Municipalidad de Villarrica</option><option value="4">Municipalidad de Villa Ygatimí</option><option value="120">Municipalidad de Villeta</option><option value="227">Municipalidad de Yabebyry</option><option value="193">Municipalidad de Yaguaron</option><option value="5">Municipalidad de Yasy Cañy</option><option value="38">Municipalidad de Yataity del Guairá</option><option value="264">Municipalidad de Yataity del Norte</option><option value="210">Municipalidad de Yatytay</option><option value="194">Municipalidad de Ybycui</option><option value="356">Municipalidad de Yby Pyta</option><option value="350">Municipalidad de Ybyrarobana</option><option value="195">Municipalidad de Ybytimi</option><option value="245">Municipalidad de Yby Yaú</option><option value="63">Municipalidad de Yguazú</option><option value="86">Municipalidad de Yhú</option><option value="121">Municipalidad de Ypacarai</option><option value="122">Municipalidad de Ypané</option><option value="6">Municipalidad de Ypejhu</option><option value="265">Municipalidad de Yrybucuá</option><option value="126">Municipalidad de Yuty</option><option value="344">Municipalidad de Zanja Pyta</option><option value="179">Petróleos Paraguayos (PETROPAR)</option><option value="1050">Policia Nacional / Ministerio del Interior</option><option value="301">Presidencia de la República</option><option value="1011">Procuraduria General de la Republica (PGR) / Presidencia de la República</option><option value="1438">Programa Ampliado de Inmunizaciones  (PAI) / Ministerio de Salud Pública y Bienestar Social</option><option value="1030">Rectorado / Universidad Nacional de Asunción</option><option value="1673">Rectorado / Universidad Nacional de Caaguazu</option><option value="1033">Rectorado / Universidad Nacional del Este</option><option value="1046">Rectorado / Universidad Nacional de Pilar</option><option value="353">Secretaria de Defensa del Consumidor y el Usuario (SEDECO)</option><option value="1573">Secretaria de Emergencia Nacional (SEN) / Presidencia de la República</option><option value="1681">Secretaría de Información y Comunicación (SICOM) / Presidencia de la República</option><option value="1005">Secretaria de la Funcion Publica (SFP) / Presidencia de la República</option><option value="1810">Secretaria de Politicas Linguisticas / Presidencia de la República</option><option value="1018">Secretaria de Prevención de Lavado de Dinero (SEPRELAD) / Presidencia de la República</option><option value="1012">Secretaria de Repatriados / Presidencia de la República</option><option value="139">Secretaría de Transporte Área Metropolitana de Asuncion (SETAMA)</option><option value="1856">Secretaria Nacional Anticorrupcion (SENAC) / Presidencia de la República</option><option value="1008">Secretaría Nacional Antidrogas (SENAD) / Presidencia de la República</option><option value="1926">Secretaria Nacional de Bienes Incautados y Comisados (SENABICO) / Presidencia de la República</option><option value="1641">Secretaria Nacional de Cultura (SNC) / Presidencia de la República</option><option value="1612">Secretaria Nacional de Deportes (SND) / Presidencia de la República</option><option value="370">Secretaría Nacional de Inteligencia (SNI)</option><option value="1869">Secretaria Nacional de la Juventud  (SNJ) / Presidencia de la República</option><option value="1832">Secretaria Nacional de Tecnologias de la Informacion y Comunicacion  (SENATICS) / Presidencia de la República</option><option value="1017">Secretaria Nacional de Turismo (SENATUR) / Presidencia de la República</option><option value="1834">Secretaria Nacional por los Derechos Humanos de las Personas con Discapacidad (SENADIS) / Presidencia de la República</option><option value="1004">Secretaria Tecnica de Planificacion (STP) / Presidencia de la República</option><option value="307">Servicio Nacional de Calidad y Salud Animal (SENACSA)</option><option value="317">Servicio Nacional de Calidad y Sanidad Vegetal y de Semillas (SENAVE)</option><option value="1343">Servicio Nacional de Promocion Profesional  (SNPP) / Ministerio de Trabajo, Empleo y Seguridad Social</option><option value="1353">Servicio Nacional de Saneamiento Ambiental- SENASA (SENASA) / Ministerio de Salud Pública y Bienestar Social</option><option value="368">Sindicatura General de Quiebras</option><option value="1344">Sistema Nacional de Formación y Capacitación Laboral (SINAFOCAL) / Ministerio de Trabajo, Empleo y Seguridad Social</option><option value="1805">Subsecretaria de Estado de Tributación (SET) / Ministerio de Hacienda</option><option value="1808">Suoc Cordillera / Corte Suprema de Justicia</option><option value="24">Tribunal Superior de Justicia Electoral (TSJE)</option><option value="1023">Unidad Administrativa Financiera Nro. 2 / Ministerio de Defensa Nacional</option><option value="226">Universidad Nacional de Asunción (UNA)</option><option value="334">Universidad Nacional de Caaguazu (UNCA)</option><option value="340">Universidad Nacional de Canindeyu (UNICAN)</option><option value="322">Universidad Nacional de Concepción (UNC)</option><option value="237">Universidad Nacional de Itapúa (UNI)</option><option value="230">Universidad Nacional del Este (UNE)</option><option value="231">Universidad Nacional de Pilar (UNP)</option><option value="325">Universidad Nacional de Villarrica del Espiritu Santo (UNVES)</option><option value="378">Universidad Politécnica Taiwán – Paraguay (UPTP)</option><option value="1522">Uoc Rectorado / Universidad Nacional de Asunción</option><option value="302">Vicepresidencia de la República (VP)</option></select>
+
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="convocantes">
+                <span class="glyphicon glyphicon-list naranja"></span>
+            </button>
+        </span>
+        </div>
+    </div>
+<div class="form-group"><label class="control-label" for="etapas_licitacion">Etapa</label>        <div class="input-group select2-bootstrap-append">
+    
+    <select id="etapas_licitacion" name="etapas_licitacion[]" class="select2 form-control" multiple="multiple"><option value="PLAN">Planificada</option><option value="CONV" selected="selected">En Convocatoria (Abierta)</option><option value="EVAL">En Evaluacion (Cerrada)</option><option value="ADJ">Adjudicada</option><option value="CAN">Anulada o Cancelada</option><option value="DES">Desierta</option><option value="SUS">Suspendida</option><option value="RP">Subasta en Recepcion de Propuestas</option><option value="SC">Subasta en Competencia</option><option value="VIG">Convenio Vigente</option><option value="PREC">Precalificada</option><option value="FIN">Convenio Finalizado</option></select>
+
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="etapas_licitacion">
+                <span class="glyphicon glyphicon-list naranja"></span>
+            </button>
+        </span>
+        </div>
+    </div>
+<div class="form-group"><label class="control-label" for="fecha_desde">Fecha Desde</label>            <div class="input-group select2-bootstrap-append"><input type="text" id="fecha_desde" name="fecha_desde" class="form-control form-control" aria-describedby="fecha_desde-addon" /><span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-target-open="fecha_desde">
+                <span class="glyphicon glyphicon-calendar naranja"></span>
+            </button>
+        </span>
+    </div></div>
+<div class="form-group"><label class="control-label" for="fecha_hasta">Fecha Hasta</label>            <div class="input-group select2-bootstrap-append"><input type="text" id="fecha_hasta" name="fecha_hasta" class="form-control form-control" aria-describedby="fecha_hasta-addon" /><span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-target-open="fecha_hasta">
+                <span class="glyphicon glyphicon-calendar naranja"></span>
+            </button>
+        </span>
+    </div></div>
+<div class="form-group"><label class="control-label" for="tipo_fecha">Tipo de Fecha</label>
+    <select id="tipo_fecha" name="tipo_fecha" class="select2 form-control"><option value="">[Seleccione una opción]</option><option value="ENT">Fecha de Entrega de Oferta</option><option value="ADJ">Fecha de Adjudicación</option><option value="VIG_CONV">Fecha de Vigencia de Convenio</option><option value="EST">Fecha Estimada para la Convocatoria</option><option value="PUB">Fecha de Publicación de la Convocatoria</option></select>
+
+    </div>
+
+
+
+
+
+
+<div id="filtros-avanzados" class="panel-group" role="tablist" aria-multiselectable="true">
+
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+                   aria-controls="collapseOne">
+                    Criterios de Búsqueda Avanzada
+                </a>
+            </h4>
+        </div>
+
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                                    <div class="form-group"><label class="control-label" for="marcas">Características Especiales</label>        <div class="input-group select2-bootstrap-append">
+    
+    <select id="marcas" name="marcas[]" class="select2 form-control" multiple="multiple"><option value="fonacide">Fonacide</option><option value="produccion_nacional">Produccion Nacional</option><option value="agricultura_familiar">Agricultura Familiar</option><option value="subasta">Subasta</option><option value="impugnado">Impugnado</option><option value="plurianual">Plurianual</option><option value="adreferendum">Presupuesto Pendiente de Aprobacion</option><option value="oferta_electronica">Oferta Electrónica</option><option value="seguridad_nacional">Seguridad Nacional</option><option value="precalificacion">Procedimiento con Precalificacion</option><option value="urgencia_impostergable">Urgencia Impostergable</option><option value="convenio_marco">Convenio Marco</option><option value="bs_estrategicos">Compra Estrategica</option><option value="contrato_abierto">Contrato Abierto</option><option value="abastecimiento_simultaneo">Abastecimiento Simultaneo</option><option value="covid_19">COVID-19</option><option value="pliego_electronico">Pliego Electrónico</option><option value="licitacion_sin_difusion">Licitación sin Difusión</option></select>
+
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-select2-open="marcas">
+                <span class="glyphicon glyphicon-list naranja"></span>
+            </button>
+        </span>
+        </div>
+    </div>
+                
+                                    <div class="form-group"><label class="control-label" for="convocante_tipo">Tipo Convocante</label>
+    <select id="convocante_tipo" name="convocante_tipo" class="form-control"><option value="">[Seleccione una opción]</option><option value="UEP">Unidad Ejecutora de Proyectos</option><option value="MUNI">Municipalidades</option><option value="UOC">Unidad Operativa de Contrataciones</option></select>
+
+    </div>
+                
+                                    <div class="form-group autocomplet">
+                        <label class="control-label" for="convocante_nombre_codigo">Unidad de Contratación/Proyecto</label>
+                        <input type="text" id="convocante_nombre_codigo" name="convocante_nombre_codigo" autocomplete="off" class="form-control" />
+                        <div id="autocompletado-convocante-nombre-codigo" class="hide contenedor-autocompletado">
+                            <ul id="resultado-autocompletado-convocante-nombre-codigo" class="resultado-autocompletado"></ul>
+                        </div>
+                    </div>
+                
+                                    <div class="form-group"><label class="control-label" for="codigo_contratacion">Código de Contratación (CC)</label><input type="text" id="codigo_contratacion" name="codigo_contratacion" class="form-control" /></div>
+                
+                                    <div class="form-group"><label class="control-label" for="catalogo_codigos_catalogo_n4">Productos</label>
+    <select id="catalogo_codigos_catalogo_n4" name="catalogo[codigos_catalogo_n4]" class="select2 form-control"><option value="">[Seleccione una opción]</option></select>
+
+    </div>
+                            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<button type="submit" id="btn_buscar" class="btn btn-primary pull-left">Buscar</button>
+<a class="btn pull-right" href="/buscador/licitaciones.html" role="button">Nueva Búsqueda</a>
+
+<div class="clearfix"></div>
+
+<input type="hidden" id="page" name="page" value="1" /><input type="hidden" id="order" name="order" /><input type="hidden" id="convocante_codigos" name="convocante_codigos" /><input type="hidden" id="convocante_tipo_codigo" name="convocante_tipo_codigo" /><input type="hidden" id="unidad_contratacion_codigo" name="unidad_contratacion_codigo" /><div class="form-group"><div id="catalogo"><input type="hidden" id="catalogo_codigos_catalogo_n4_label" name="catalogo[codigos_catalogo_n4_label]" /></div></div></form>
+                </aside>
+    </div>
+
+    <div class="col-md-12">
+        
+        <section id="licitaciones">
+                        <h2 class="titu-dropdown">
+                Resultados de la Búsqueda
+
+                                    <a href="#ordenar" class="pull-right" data-toggle="collapse"><small>ORDENAR RESULTADOS <i class="fa fa-sort"></i></small></a>
+                
+            </h2>
+            
+    <div class="row">
+        <div class="col-sm-16">
+            
+<div id="ordenar" class="order collapse " aria-expanded="">
+
+    
+    <ul class="list-inline">
+
+        
+            <li>
+                <div class="dropdown">
+                    <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        ID de Licitación
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=nro_licitacion%20asc">
+                                <i class="fa fa-long-arrow-up"></i>Ascendente
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=nro_licitacion%20desc">
+                                <i class="fa fa-long-arrow-down"></i>Descendente
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        
+            <li>
+                <div class="dropdown">
+                    <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Etapa
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=etapa%20asc">
+                                <i class="fa fa-long-arrow-up"></i>Ascendente
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=etapa%20desc">
+                                <i class="fa fa-long-arrow-down"></i>Descendente
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        
+            <li>
+                <div class="dropdown">
+                    <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Convocante
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=convocante%20asc">
+                                <i class="fa fa-long-arrow-up"></i>Ascendente
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=convocante%20desc">
+                                <i class="fa fa-long-arrow-down"></i>Descendente
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        
+            <li>
+                <div class="dropdown">
+                    <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Tipo de Procedimiento
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=tipo_procedimiento%20asc">
+                                <i class="fa fa-long-arrow-up"></i>Ascendente
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=tipo_procedimiento%20desc">
+                                <i class="fa fa-long-arrow-down"></i>Descendente
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        
+            <li>
+                <div class="dropdown">
+                    <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Publicación de la Convocatoria
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=fecha_publicacion_convocatoria%20asc">
+                                <i class="fa fa-long-arrow-up"></i>Ascendente
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=fecha_publicacion_convocatoria%20desc">
+                                <i class="fa fa-long-arrow-down"></i>Descendente
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        
+            <li>
+                <div class="dropdown">
+                    <button class="btn btn-dncp-white btn-sm dropdown-toggle" type="button" id="ordenarPor1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Fecha de Entrega de Ofertas
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="ordenarPor1">
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=fecha_entrega_oferta%20asc">
+                                <i class="fa fa-long-arrow-up"></i>Ascendente
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&amp;order=fecha_entrega_oferta%20desc">
+                                <i class="fa fa-long-arrow-down"></i>Descendente
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        
+    </ul>
+</div>        </div>
+    </div>
+
+    <ul class="results">
+
+        
+                
+                
+            
+
+<li>
+    <article>
+                    <header>
+                <h3>                    <a href="/licitaciones/convocatoria/407921-lpi-n-4pm-2022-servicio-impresion-provision-billetes-1.html">LPI N° 4PM/2022 - SERVICIO DE IMPRESION Y PROVISIÓN DE BILLETES</a>
+                
+                    <span class="tags">
+                                                
+    
+            
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Plurianual" >
+
+            Plurianual
+    </span>
+
+
+        
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Oferta Electrónica" >
+
+            Oferta Electrónica
+    </span>
+
+
+            
+
+                                    </span>
+                </h3>
+                                                            <div class="inline-actions visible-xs visible-sm">
+                                                            <a href="/licitaciones/convocatoria/407921-lpi-n-4pm-2022-servicio-impresion-provision-billetes-1.html">Ver Convocatoria</a>  |             <a href="/licitaciones/planificacion/407921-servicio-impresion-provision-billetes-1.html">Ver Planificación</a>     
+                                        </div>
+                                                </header>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                        <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>407921</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Banco Central del Paraguay / Banca Central del Estado
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            7 - Servicios Técnicos
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            LPI - Licitación Pública Internacional
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                                                                                        <span class="info-label">Publicación de la Convocatoria</span>
+                                08-06-2022
+                            
+                        </div>
+                        <div class="col-lg-8">
+
+                            
+                                                            <span class="info-label">Fecha de Entrega de Ofertas</span>
+                            
+                            23-08-2022
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">                    
+    
+            <div class="btn-group">
+            <a href="/licitaciones/convocatoria/407921-lpi-n-4pm-2022-servicio-impresion-provision-billetes-1.html" class="btn btn-sm btn-dncp-dropdown">Ver Convocatoria</a>
+
+            <a class="btn btn-sm btn-dncp-dropdown dropdown-toggle"
+               data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Otras Acciones</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li><a href="/licitaciones/planificacion/407921-servicio-impresion-provision-billetes-1.html">Ver Planificación</a></li>
+                            </ul>
+        </div>
+    
+                </div>
+                    </div>
+    </article>
+</li>
+
+        
+                
+                
+            
+
+<li>
+    <article>
+                    <header>
+                <h3>                    <a href="/licitaciones/convocatoria/405973-adquisicion-articulos-electricos-ferreteria-ad-referendum-1.html">ADQUISICIÓN DE ARTÍCULOS ELÉCTRICOS Y DE FERRETERÍA (AD REFERENDUM)</a>
+                
+                    <span class="tags">
+                                                
+    
+            
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Presupuesto Pendiente de Aprobación" >
+
+            Presupuesto Pendiente de Aprobación
+    </span>
+
+
+        
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Subasta" >
+
+            <i class="fa fa-gavel fa-flip-horizontal"></i>
+            Subasta
+    </span>
+
+
+        
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Pliego Electrónico" >
+
+            Pliego Electrónico
+    </span>
+
+
+            
+
+                                    </span>
+                </h3>
+                                                            <div class="inline-actions visible-xs visible-sm">
+                                                            <a href="/licitaciones/convocatoria/405973-adquisicion-articulos-electricos-ferreteria-ad-referendum-1.html">Ver Convocatoria</a>  |             <a href="/licitaciones/planificacion/405973-adquisicion-articulos-electricos-ferreteria-ad-referendum-1.html">Ver Planificación</a>     
+                                        </div>
+                                                </header>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                        <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>405973</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Circunscripción Judicial del Dpto. Paraguarí / Corte Suprema de Justicia / Poder Judicial
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            18 - Materiales e insumos eléctricos, metálicos y no metálicos, Plásticos, cauchos. Repuestos, herramientas, cámaras y cubiertas.
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            CD - Contratación Directa
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                                                                                        <span class="info-label">Publicación de la Convocatoria</span>
+                                28-04-2022
+                            
+                        </div>
+                        <div class="col-lg-8">
+
+                            
+                                                            <span class="info-label">Fecha de Inicio de Propuestas</span>
+                            
+                            29-07-2022
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">                    
+    
+            <div class="btn-group">
+            <a href="/licitaciones/convocatoria/405973-adquisicion-articulos-electricos-ferreteria-ad-referendum-1.html" class="btn btn-sm btn-dncp-dropdown">Ver Convocatoria</a>
+
+            <a class="btn btn-sm btn-dncp-dropdown dropdown-toggle"
+               data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Otras Acciones</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li><a href="/licitaciones/planificacion/405973-adquisicion-articulos-electricos-ferreteria-ad-referendum-1.html">Ver Planificación</a></li>
+                            </ul>
+        </div>
+    
+                </div>
+                    </div>
+    </article>
+</li>
+
+        
+                
+                
+            
+
+<li>
+    <article>
+                    <header>
+                <h3>                    <a href="/licitaciones/convocatoria/405351-llamado-mopc-n-129-2021-construccion-tramo-ruta-10-capiibary-sto-domingo-esc-agricol-1.html">LLAMADO MOPC Nº 129/2021. CONSTRUCCIÓN DEL TRAMO RUTA 10 (CAPIIBARY)-STO DOMINGO- ESC. AGRICOLA - SIDEPAR? RUTA 13 (DEPARTAMENTO DE SAN PEDRO Y CAAGUAZU) AD REFERENDUM AL PGN 2022</a>
+                
+                    <span class="tags">
+                                                
+    
+            
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Presupuesto Pendiente de Aprobación" >
+
+            Presupuesto Pendiente de Aprobación
+    </span>
+
+
+        
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Plurianual" >
+
+            Plurianual
+    </span>
+
+
+            
+
+                                    </span>
+                </h3>
+                                                            <div class="inline-actions visible-xs visible-sm">
+                                                            <a href="/licitaciones/convocatoria/405351-llamado-mopc-n-129-2021-construccion-tramo-ruta-10-capiibary-sto-domingo-esc-agricol-1.html">Ver Convocatoria</a>  |             <a href="/licitaciones/planificacion/405351-construccion-tramo-ruta-10-capiibary-sto-domingo-esc-agricola-sidepar-ruta-13-depart-1.html">Ver Planificación</a>     
+                                        </div>
+                                                </header>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                        <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>405351</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Ministerio de Obras Públicas y Comunicaciones / Poder Ejecutivo
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            21 - Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            LPN - Licitación Pública Nacional
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                                                                                        <span class="info-label">Publicación de la Convocatoria</span>
+                                19-01-2022
+                            
+                        </div>
+                        <div class="col-lg-8">
+
+                            
+                                                            <span class="info-label">Fecha de Entrega de Ofertas</span>
+                            
+                            25-07-2022
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">                    
+    
+            <div class="btn-group">
+            <a href="/licitaciones/convocatoria/405351-llamado-mopc-n-129-2021-construccion-tramo-ruta-10-capiibary-sto-domingo-esc-agricol-1.html" class="btn btn-sm btn-dncp-dropdown">Ver Convocatoria</a>
+
+            <a class="btn btn-sm btn-dncp-dropdown dropdown-toggle"
+               data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Otras Acciones</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li><a href="/licitaciones/planificacion/405351-construccion-tramo-ruta-10-capiibary-sto-domingo-esc-agricola-sidepar-ruta-13-depart-1.html">Ver Planificación</a></li>
+                            </ul>
+        </div>
+    
+                </div>
+                    </div>
+    </article>
+</li>
+
+        
+                
+                
+            
+
+<li>
+    <article>
+                    <header>
+                <h3>                    <a href="/licitaciones/convocatoria/409294-sp-ande-bid-n-3-2022-seleccion-consultores-elaboracion-proyecto-ejecutivo-coordinaci-1.html">SP ANDE - BID N° 3-2022 Selección de Consultores para la Elaboración del Proyecto Ejecutivo, Coordinación General, Supervisión e Inspección de las Intervenciones del Programa de Rehabilitación y Modernización del Complejo Acaray - Yguazú</a>
+                
+                    <span class="tags">
+                                                
+    
+            
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Plurianual" >
+
+            Plurianual
+    </span>
+
+
+            
+
+                                    </span>
+                </h3>
+                                                            <div class="inline-actions visible-xs visible-sm">
+                                                            <a href="/licitaciones/convocatoria/409294-sp-ande-bid-n-3-2022-seleccion-consultores-elaboracion-proyecto-ejecutivo-coordinaci-1.html">Ver Convocatoria</a>  |             <a href="/licitaciones/planificacion/409294-consultoria-ingenieria-supervision-rehabilitacion-modernizacion-complejo-acaray-e-yg-1.html">Ver Planificación</a>     
+                                        </div>
+                                                </header>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                        <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>409294</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Administración Nacional de Electricidad / Empresas Públicas
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            5 - Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            SCC - Selección basada en las calificaciones de los consultores 
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                                                                                        <span class="info-label">Publicación de la Convocatoria</span>
+                                06-05-2022
+                            
+                        </div>
+                        <div class="col-lg-8">
+
+                            
+                                                            <span class="info-label">Fecha de Entrega de Ofertas</span>
+                            
+                            13-07-2022
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">                    
+    
+            <div class="btn-group">
+            <a href="/licitaciones/convocatoria/409294-sp-ande-bid-n-3-2022-seleccion-consultores-elaboracion-proyecto-ejecutivo-coordinaci-1.html" class="btn btn-sm btn-dncp-dropdown">Ver Convocatoria</a>
+
+            <a class="btn btn-sm btn-dncp-dropdown dropdown-toggle"
+               data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Otras Acciones</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li><a href="/licitaciones/planificacion/409294-consultoria-ingenieria-supervision-rehabilitacion-modernizacion-complejo-acaray-e-yg-1.html">Ver Planificación</a></li>
+                            </ul>
+        </div>
+    
+                </div>
+                    </div>
+    </article>
+</li>
+
+        
+                
+                
+            
+
+<li>
+    <article>
+                    <header>
+                <h3>                    <a href="/convenios-marco/convocatoria/415423-lpi-ande-n-1702-2022-adquisicion-postes-poliester-reforzado-fibra-vidrio-prfv-conven.html">LPI ANDE N° 1702/2022 Adquisición de Postes de Poliester Reforzado con Fibra de Vidrio (PRFV) - Convenio de Almacén de Productos Estratégicos</a>
+                
+                    <span class="tags">
+                                                
+    
+            
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Convenio Marco" >
+
+            Convenio Marco
+    </span>
+
+
+            
+
+                                    </span>
+                </h3>
+                                                            <div class="inline-actions visible-xs visible-sm">
+                                                            <a href="/convenios-marco/convocatoria/415423-lpi-ande-n-1702-2022-adquisicion-postes-poliester-reforzado-fibra-vidrio-prfv-conven.html">Ver Convocatoria</a>     
+                                        </div>
+                                                </header>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                        <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>415423</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Dirección Nacional de Contrataciones Públicas / Entes Autónomos y Autárquicos
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            18 - Materiales e insumos eléctricos, metálicos y no metálicos, Plásticos, cauchos. Repuestos, herramientas, cámaras y cubiertas.
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            Licitación Pública Nacional
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                                                                                        <span class="info-label">Convocatoria Prevista Para</span>
+                                
+                            
+                        </div>
+                        <div class="col-lg-8">
+
+                            
+                                                            <span class="info-label">Fecha de Entrega de Ofertas</span>
+                            
+                            12-07-2022
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">                    
+    
+            <a href="/convenios-marco/convocatoria/415423-lpi-ande-n-1702-2022-adquisicion-postes-poliester-reforzado-fibra-vidrio-prfv-conven.html" class="btn btn-sm btn-dncp-dropdown" label="hola">Ver Convocatoria</a>
+    
+                </div>
+                    </div>
+    </article>
+</li>
+
+        
+                
+                
+            
+
+<li>
+    <article>
+                    <header>
+                <h3>                    <a href="/licitaciones/convocatoria/415266-provision-montaje-senalizaciones-interiores-exteriores-palacio-justicia-salto-guaira-1.html">Provisión y Montaje de las Señalizaciones Interiores y Exteriores para el Palacio de Justicia de Salto del Guairá.</a>
+                
+                    <span class="tags">
+                                                
+    
+            
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Plurianual" >
+
+            Plurianual
+    </span>
+
+
+            
+
+                                    </span>
+                </h3>
+                                                            <div class="inline-actions visible-xs visible-sm">
+                                                            <a href="/licitaciones/convocatoria/415266-provision-montaje-senalizaciones-interiores-exteriores-palacio-justicia-salto-guaira-1.html">Ver Convocatoria</a>  |             <a href="/licitaciones/planificacion/415266-provision-montaje-senalizaciones-interiores-exteriores-palacio-justicia-salto-guaira-1.html">Ver Planificación</a>     
+                                        </div>
+                                                </header>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                        <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>415266</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Corte Suprema de Justicia / Poder Judicial
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            21 - Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            CO - Concurso de Ofertas
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                                                                                        <span class="info-label">Publicación de la Convocatoria</span>
+                                03-06-2022
+                            
+                        </div>
+                        <div class="col-lg-8">
+
+                            
+                                                            <span class="info-label">Fecha de Entrega de Ofertas</span>
+                            
+                            08-07-2022
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">                    
+    
+            <div class="btn-group">
+            <a href="/licitaciones/convocatoria/415266-provision-montaje-senalizaciones-interiores-exteriores-palacio-justicia-salto-guaira-1.html" class="btn btn-sm btn-dncp-dropdown">Ver Convocatoria</a>
+
+            <a class="btn btn-sm btn-dncp-dropdown dropdown-toggle"
+               data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Otras Acciones</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li><a href="/licitaciones/planificacion/415266-provision-montaje-senalizaciones-interiores-exteriores-palacio-justicia-salto-guaira-1.html">Ver Planificación</a></li>
+                            </ul>
+        </div>
+    
+                </div>
+                    </div>
+    </article>
+</li>
+
+        
+                
+                
+            
+
+<li>
+    <article>
+                    <header>
+                <h3>                    <a href="/licitaciones/convocatoria/405493-servicio-escribania-1.html">Servicio de Escribania</a>
+                
+                    <span class="tags">
+                                                
+    
+            
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Contrato Abierto" >
+
+            Contrato Abierto
+    </span>
+
+
+        
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Pliego Electrónico" >
+
+            Pliego Electrónico
+    </span>
+
+
+            
+
+                                    </span>
+                </h3>
+                                                            <div class="inline-actions visible-xs visible-sm">
+                                                            <a href="/licitaciones/convocatoria/405493-servicio-escribania-1.html">Ver Convocatoria</a>  |             <a href="/licitaciones/planificacion/405493-servicio-escribania-1.html">Ver Planificación</a>     
+                                        </div>
+                                                </header>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                        <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>405493</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Caja de Jubilaciones y Pensiones del Personal Municipal / Entidades Públicas de Seguridad Social
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            7 - Servicios Técnicos
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            CD - Contratación Directa
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                                                                                        <span class="info-label">Publicación de la Convocatoria</span>
+                                13-05-2022
+                            
+                        </div>
+                        <div class="col-lg-8">
+
+                            
+                                                            <span class="info-label">Fecha de Entrega de Ofertas</span>
+                            
+                            08-07-2022
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">                    
+    
+            <div class="btn-group">
+            <a href="/licitaciones/convocatoria/405493-servicio-escribania-1.html" class="btn btn-sm btn-dncp-dropdown">Ver Convocatoria</a>
+
+            <a class="btn btn-sm btn-dncp-dropdown dropdown-toggle"
+               data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Otras Acciones</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li><a href="/licitaciones/planificacion/405493-servicio-escribania-1.html">Ver Planificación</a></li>
+                            </ul>
+        </div>
+    
+                </div>
+                    </div>
+    </article>
+</li>
+
+        
+                
+                
+            
+
+<li>
+    <article>
+                    <header>
+                <h3>                    <a href="/licitaciones/precalificacion/739-2022-servicio-consultoria-diseno-desarrollo-reestructuracion-organizacional-funcional.html">SERVICIO DE CONSULTORÍA PARA EL DISEÑO Y DESARROLLO DE LA REESTRUCTURACIÓN ORGANIZACIONAL Y FUNCIONAL DE LA SUBSECRETARÍA DE ESTADO DE TRIBUTACIÓN DEL MINISTERIO DE HACIENDA</a>
+                
+                    <span class="tags">
+                                                
+    
+            
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Procedimiento con Precalificación" >
+
+            Procedimiento con Precalificación
+    </span>
+
+
+            
+
+                                    </span>
+                </h3>
+                                                            <div class="inline-actions visible-xs visible-sm">
+                                                            <a href="/licitaciones/precalificacion/739-2022-servicio-consultoria-diseno-desarrollo-reestructuracion-organizacional-funcional.html">Ver Precalificación</a>     
+                                        </div>
+                                                </header>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                        <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>739</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Ministerio de Hacienda / Poder Ejecutivo
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            5 - Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            SCC - Selección basada en las calificaciones de los consultores 
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                                                                                        <span class="info-label">Publicación de la Convocatoria</span>
+                                09-06-2022
+                            
+                        </div>
+                        <div class="col-lg-8">
+
+                            
+                                                            <span class="info-label">Fecha de Entrega de Ofertas</span>
+                            
+                            07-07-2022
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">                    
+    
+            <a href="/licitaciones/precalificacion/739-2022-servicio-consultoria-diseno-desarrollo-reestructuracion-organizacional-funcional.html" class="btn btn-sm btn-dncp-dropdown" label="hola">Ver Precalificación</a>
+    
+                </div>
+                    </div>
+    </article>
+</li>
+
+        
+                
+                
+            
+
+<li>
+    <article>
+                    <header>
+                <h3>                    <a href="/licitaciones/convocatoria/409655-seguro-medico-1.html">SEGURO MEDICO</a>
+                
+                    <span class="tags">
+                                                
+    
+            
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Contrato Abierto" >
+
+            Contrato Abierto
+    </span>
+
+
+        
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Plurianual" >
+
+            Plurianual
+    </span>
+
+
+        
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Pliego Electrónico" >
+
+            Pliego Electrónico
+    </span>
+
+
+            
+
+                                    </span>
+                </h3>
+                                                            <div class="inline-actions visible-xs visible-sm">
+                                                            <a href="/licitaciones/convocatoria/409655-seguro-medico-1.html">Ver Convocatoria</a>  |             <a href="/licitaciones/planificacion/409655-seguro-medico-1.html">Ver Planificación</a>     
+                                        </div>
+                                                </header>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                        <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>409655</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Instituto Nacional de Cooperativismo / Entes Autónomos y Autárquicos
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            17 - Equipos, Productos e instrumentales Médicos y de Laboratorio. Servicios asistenciales de salud
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            LPN - Licitación Pública Nacional
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                                                                                        <span class="info-label">Publicación de la Convocatoria</span>
+                                09-06-2022
+                            
+                        </div>
+                        <div class="col-lg-8">
+
+                            
+                                                            <span class="info-label">Fecha de Entrega de Ofertas</span>
+                            
+                            07-07-2022
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">                    
+    
+            <div class="btn-group">
+            <a href="/licitaciones/convocatoria/409655-seguro-medico-1.html" class="btn btn-sm btn-dncp-dropdown">Ver Convocatoria</a>
+
+            <a class="btn btn-sm btn-dncp-dropdown dropdown-toggle"
+               data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Otras Acciones</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <li><a href="/licitaciones/planificacion/409655-seguro-medico-1.html">Ver Planificación</a></li>
+                            </ul>
+        </div>
+    
+                </div>
+                    </div>
+    </article>
+</li>
+
+        
+                
+                
+            
+
+<li>
+    <article>
+                    <header>
+                <h3>                    <a href="/convenios-marco/convocatoria/415325-lpi-ande-n-1704-2022-adquisicion-luminaria-led-alumbrado-publico-convenio-almacen-pr.html">LPI ANDE N° 1704/2022 para la Adquisición de Luminaria LED para Alumbrado Público - Convenio de Almacén de Productos Estratégicos </a>
+                
+                    <span class="tags">
+                                                
+    
+            
+                                                          
+                                        
+                    
+        
+    
+    <span class="label label-default" title="Convenio Marco" >
+
+            Convenio Marco
+    </span>
+
+
+            
+
+                                    </span>
+                </h3>
+                                                            <div class="inline-actions visible-xs visible-sm">
+                                                            <a href="/convenios-marco/convocatoria/415325-lpi-ande-n-1704-2022-adquisicion-luminaria-led-alumbrado-publico-convenio-almacen-pr.html">Ver Convocatoria</a>     
+                                        </div>
+                                                </header>
+                        <div class="row info vcenter">
+                            <div class="col-sm-16 col-md-11 col-lg-12">
+                                        <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">ID de Licitación</span>
+                            <em>415325</em>
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Etapa</span>
+                            <em>En Convocatoria (Abierta)</em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Convocante</span>
+                            Dirección Nacional de Contrataciones Públicas / Entes Autónomos y Autárquicos
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <span class="info-label">Categoría</span>
+                            18 - Materiales e insumos eléctricos, metálicos y no metálicos, Plásticos, cauchos. Repuestos, herramientas, cámaras y cubiertas.
+                        </div>
+                        <div class="col-lg-8">
+                            <span class="info-label">Tipo de Procedimiento</span>
+                            Licitación Pública Nacional
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                                                                                        <span class="info-label">Convocatoria Prevista Para</span>
+                                
+                            
+                        </div>
+                        <div class="col-lg-8">
+
+                            
+                                                            <span class="info-label">Fecha de Entrega de Ofertas</span>
+                            
+                            06-07-2022
+
+                        </div>
+
+                    </div>
+                
+                </div>
+                <div class="col-md-5 col-lg-2 visible-md visible-lg">                    
+    
+            <a href="/convenios-marco/convocatoria/415325-lpi-ande-n-1704-2022-adquisicion-luminaria-led-alumbrado-publico-convenio-almacen-pr.html" class="btn btn-sm btn-dncp-dropdown" label="hola">Ver Convocatoria</a>
+    
+                </div>
+                    </div>
+    </article>
+</li>
+
+        
+    </ul>
+
+    <div class="tools">
+        <td colspan="8">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="downloadTool">
+                        Descargar datos como:
+                        <a href="/buscador/licitaciones.csv?etapas_licitacion%5B0%5D=CONV" class="btn btn-default"> <i class="fa fa-cloud-download"></i> Archivo CSV</a>
+                    </div>
+                </div>
+                <div class="col-md-9 text-right">
+                        <div class="pagination-block">
+        <div class="results-info">Se muestran del 1 al 10 de 545 resultados</div>
+        <ul class="pagination"><li class="pagination-prev disabled"><span><span class="glyphicon glyphicon-chevron-left"></span></span></li><li class="active"><span>1 <span class="sr-only">(current)</span></span></li><li><a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=2">2</a></li><li><a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=3">3</a></li><li><a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=4">4</a></li><li><a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=5">5</a></li><li class="disabled"><span>&hellip;</span></li><li><a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=55">55</a></li><li class="pagination-next"><a href="/buscador/licitaciones.html?etapas_licitacion%5B0%5D=CONV&page=2" rel="next"><span class="glyphicon glyphicon-chevron-right"></span></a></li></ul>
+            </div>
+                </div>
+            </div>
+        </td>
+    </div>
+
+                </section>
+    </div>
+
+</div>
+
+        </div>
+    </div>
+
+    
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-4 col-md-3">
+                    <img src="//static.dncp.gov.py/assets/images/dncp/logos/logo_dncp.png?v25" class="logo-dncp"
+                         width="250" height="72" alt="Logo Footer">
+                </div>
+
+                <div class="col-sm-4 col-md-7" itemscope itemtype="http://schema.org/LocalBusiness">
+
+                    <div itemprop="name">Dirección Nacional de Contrataciones Públicas</div>
+
+                    <div>
+                        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="streetAddress">E.E.U.U. 961 c/ Tte. Fariña</span> -
+                            <span itemprop="addressLocality">Asunción</span>,
+                            <span itemprop="addressCountry">Paraguay</span>
+                        </span>
+                    </div>
+
+                    <div>
+                        <em>Teléfono:</em>
+                        <span itemprop="telephone">+595214154000</span>
+                    </div>
+
+                    <div>
+                        <em>Horario de Atención:</em>
+                        <span itemprop="openingHours" content="Mo-Fr 07:00-15:00">Lunes a Viernes de 07:00 a 15:00 horas</span>
+                    </div>
+
+                    <div>
+                        <em>Mesa de entrada por correo electrónico:</em>
+                        <span itemprop="email">&#109;&#101;&#115;&#97;&#100;&#101;&#101;&#110;&#116;&#114;&#97;&#100;&#97;&#64;&#100;&#110;&#99;&#112;&#46;&#103;&#111;&#118;&#46;&#112;&#121;</span>
+                    </div>
+
+                    <div class="mb5">
+                        <em>Para consultas varias y soporte técnico informático, ingresar a Mesa de Ayuda</em>
+                    </div>
+
+                    <div>
+                        <a href="/dncp/preguntas-frecuentes.html">Preguntas Frecuentes</a> | <a
+                                href="http://www.contrataciones.gov.py/mesa-de-ayuda.html">Mesa de Ayuda</a> | <a
+                                href="/dncp/terminos-y-condiciones-de-uso.html">Condiciones de Uso</a>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-4 col-md-3">
+                    <img src="//static.dncp.gov.py/assets/images/dncp/logos/logo_nacional_guarani.png?v25"
+                         class="logo-gobierno" alt="Logo del Gobierno Nacional">
+                </div>
+
+                <div class="col-sm-4 col-md-3">
+                    <img src="//static.dncp.gov.py/assets/images/dncp/logos/logo_py_gente_guarani.png?v25"
+                         class="logo-slogan" alt="Slogan 'Paraguay de la Gente'">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <div id="alert" class="modal fade" role="dialog" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="title"></h4>
+            </div>
+            <div class="modal-body">
+                <div id="content" class="modal-morecontent fixed-height">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-grafico-licitacion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <iframe></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            
+    <script src="//static.dncp.gov.py/assets/scripts/sicp.min.js?v25"></script>
+
+
+
+    <script src="//static.dncp.gov.py/assets/scripts/autocompletado-unidad-contratacion-proyecto.js?v25"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            sicp.Selector.autocomplete(
+                    'catalogo_codigos_catalogo_n4',
+                    '/selector/catalogo_n4.json',
+                    '',
+                    ''
+            );
+
+            $('#convocantes').select2()
+                .on('select2:select', function(e) {
+                    var codigosConvocantes = $('#convocante_codigos').val();
+
+                    if(codigosConvocantes.trim() != ''){
+                        $('#convocante_codigos').val(codigosConvocantes+','+ e.params.data.id);
+                    }else {
+                        $('#convocante_codigos').val(e.params.data.id);
+                    }
+
+                    $(inputAutocompletadoId).val('');
+                })
+                .on('select2:unselect', function(e) {
+                    var codigosConvocantes = $('#convocante_codigos').val();
+                    codigosConvocantes = codigosConvocantes.split(',');
+
+                    for(var indice in codigosConvocantes){
+                        if(codigosConvocantes[indice] == e.params.data.id){
+                            codigosConvocantes.splice(indice,1);
+                        }
+                    }
+
+                    if (codigosConvocantes.length > 0){
+                        codigosConvocantes = codigosConvocantes.toString();
+                    }
+
+                    $(inputAutocompletadoId).val('');
+                    $('#convocante_codigos').val(codigosConvocantes);
+                });
+            $('#convocante_tipo').select2()
+                .on('select2:select', function(e) {
+                    $(inputAutocompletadoId).val('');
+                    $('#convocante_tipo_codigo').val(e.currentTarget.value);
+                });
+        })
+    </script>
+
+    <script>
+        if ( self == top ) {
+            document.getElementsByTagName('body')[0].style.display='block';
+        }else {
+            top.location = self.location;
+        }
+    </script>
+</body>
+</html>

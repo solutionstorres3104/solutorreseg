@@ -1,0 +1,175 @@
+{% extends 'customer/customerbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 450px; /* Should be removed. Only for demonstration */
+      }
+      
+      /*  Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      </style>
+</head>
+
+<form class="form-inline pull-right" action="/asegurar1/">
+  Id Licitacion: <input type="text" id="txtVarX" /><br />
+  <button type="button" id="cmdRedirect">Buscar</button>
+
+  <div class="col-md-4 ">
+    <form action="." method="POST">
+          {%csrf_token%}
+         
+          <a class="btn" href="{% url 'customer:vencedores' '3' %}" rel="tooltip" data-original-title="Mais informações sobre a partida">Detalhes</a>  
+     </form>     
+  </div>
+  
+</form>
+
+
+
+
+<h2 style="text-align:center; color:blue;">ASEGURAR</h2>
+
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+   
+    <div class="row">
+      
+      <div class="column" style="background-color:#aaa;">
+        <h2>Datos de la Licitación</h2>
+        
+        <label for="course_name"> RUT Mandante</label>
+        {% render_field question1Form.rut_unidad class="form-control" placeholder=" RUT Mandante" %}
+        <label for="course_name">Nombre Mandante</label>
+        {% render_field question1Form.nombre_unidad class="form-control" placeholder="Nombre Mandante" %}
+        <label for="course_name">Calle (dirección)</label>
+        {% render_field question1Form.calle_unidad class="form-control" placeholder="Calle (dirección)" %}
+        <label for="course_name">Número (dirección)</label>
+        {% render_field question1Form.numero_unidad class="form-control" placeholder="Número (dirección)" %}
+        <label for="course_name">Región</label>
+        {% render_field question1Form.comuna_unidad class="form-control" placeholder="Región" %}
+        <label for="course_name">Comuna</label>
+        {% render_field question1Form.region_unidad class="form-control" placeholder="Comuna" %}
+      </div>
+    
+      <div class="column" style="background-color:#aaa;">
+        <h2>Datos de la Póliza</h2>
+        <label for="course_name">Tipo de Póliza</label>
+        {% render_field question1Form.policy class="form-control" placeholder="Fiel cumplimiento" %}
+        <label for="course_name">Moneda</label>
+        {% render_field question1Form.moneda class="form-control" placeholder="Peso Chileno" %}
+        <label for="course_name">Glosa</label>
+        {% render_field question1Form.glosa class="form-control" placeholder="Glosa" %}
+        <label for="course_name">Monto Asegurado</label>
+        {% render_field question1Form.monto_asegurado class="form-control" placeholder="100000" %}
+        <label for="course_name">Vigencia desde</label>
+        {% render_field question1Form.vigencia_desde type="date" class="form-control" placeholder="mm/dd/yyyy" %}
+        <label for="course_name">Vigencia hasta</label>
+        {% render_field question1Form.vigencia_hasta type="date" class="form-control" placeholder="mm/dd/yyyy" %}
+      </div>
+      
+    </div>
+    
+    
+
+    <button type="submit" class="btn btn-primary" style="left: auto;">Enviar</button>
+  </form>
+   
+  <article>
+   
+    <div id="Ficha2" class="ficha">
+      <div class="titulo_ficha01 titulo00">
+          <span id="lblFicha2" class="titulo00">2. Organismo demandante</span>
+      </div>
+      <div class="tabla_ficha_00">
+          <div class="contenedor_00">
+              <div class="row_a">
+                  <div class="cell_a">
+                      <span id="lblFicha2TituloRazon" class="texto05">Razón social:</span>
+                  </div>
+                  <div class="cell_a">
+                      <span id="lblFicha2Razon" class="texto09">{{ users.CodigoExterno }}</span>
+                  </div>
+              </div>
+          </div>
+          <div class="contenedor_00">
+              <div class="row_a">
+                  <div class="cell_a">
+                      <span id="lblFicha2TituloUnidad" class="texto05">Unidad de compra:</span>
+                  </div>
+                  <div class="cell_a">
+                      <span id="lblFicha2Unidad" class="texto09">Corp. Adm. del Poder Judicial - Temuco</span>
+                  </div>
+              </div>
+          </div>
+          <div class="contenedor_00">
+              <div class="row_a">
+                  <div class="cell_a">
+                      <span id="lblFicha2TituloRUT" class="texto05">R.U.T.:</span>
+                  </div>
+                  <div class="cell_a">
+                      <span id="lblFicha2RUT" class="texto09">60.301.001-9</span>
+                  </div>
+              </div>
+          </div>
+          <div class="contenedor_00">
+              <div class="row_a">
+                  <div class="cell_a">
+                      <span id="lblFicha2TituloDireccion" class="texto05">Dirección:</span>
+                  </div>
+                  <div class="cell_a">
+                      <span id="lblFicha2Direccion" class="texto09">CAUPOLICAN 1077</span>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="contenedor_00">
+              <div class="row_a">
+                  <div class="cell_a">
+                      <span id="lblFicha2TituloComuna" class="texto05">Comuna:</span>
+                  </div>
+                  <div class="cell_a">
+                      <span id="lblFicha2Comuna" class="texto09">Temuco</span>
+                  </div>
+              </div>
+          </div>
+          <div class="contenedor_00">
+              <div class="row_a">
+                  <div class="cell_a">
+                      <span id="lblFicha2TituloRegion" class="texto05">Región en que se genera la licitación:</span>
+                  </div>
+                  <div class="cell_a">
+                      <span id="lblFicha2Region" class="texto09">Región de la Araucanía </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</article>
+  <script>
+    document.getElementById('cmdRedirect').addEventListener('click', function(){
+          location.href = '/asegurar1/'+document.getElementById('txtVarX').value;
+               
+        });
+    </script>
+
+<br><br><br><br>
+{% endblock content %} 

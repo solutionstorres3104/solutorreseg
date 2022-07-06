@@ -1,0 +1,75 @@
+{% extends 'insurance/adminbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+</head>
+<br><br>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">Registro de Titular de la Póliza</h6>
+    </div>
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+       
+        <th>RUT Mandante</th>
+        <th>Nombre Mandante</th>
+        <th>Tipo de Póliza</th> 
+        <th>Monto Asegurado</th>
+        <th>Vigencia desde</th>
+        <th>Vigencia hasta</th> 
+        <th>Status</th>
+          <th class="text-right">Action</th>
+        </tr>
+      </thead>
+      {% for t in policyrecords %}
+      <tr>
+        <td> {{t.rut_unidad}}</td>
+        <td>{{t.nombre_unidad}}</td>
+        <td>{{t.monto_asegurado}}</td>
+        <td> {{t.policy}}</td>
+        <td>{{t.vigencia_desde}}</td>
+        <td>{{t.vigencia_hasta}}</td>
+        <td>{{t.status}}</td>
+
+                    {% if t.status == 'Pendiente' %}
+                <td class="text-right">
+                    <button class="btn btn-primary badge-pill" style="width: 80px;"><a  style="text-decoration: none;color: white;" href="{% url 'approve-request' t.id  %}">Aprobar</a> </button>
+                    <button class="btn btn-danger badge-pill" style="width: 80px;"><a  style="text-decoration: none;color: white;" href="{% url 'reject-request' t.id  %}">Rechazar</a> </button>
+                </td>              
+
+                {% else %}
+                <td class="text-right">
+                <span style="color:red;font-size:20px;" class="label success">{{t.status}}</span></td>
+                
+
+                {% endif %}
+
+
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}

@@ -1,0 +1,103 @@
+{% extends 'customer/customerbase.html' %}
+{% load widget_tweaks %}
+ 
+{% block content %}
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 450px; /* Should be removed. Only for demonstration */
+      }
+      
+      /*  Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      </style>
+     
+      
+</head>
+
+
+<h2 style="text-align:center; color:blue;">Características de la licitación</h2>
+
+<div style="text-align: left;">
+    <div class="col-sm-9">
+        <div>
+            <article id="ads" class="media content-section" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div style="text-align: center;">
+                    <div class="col-sm-9">
+                        <div>
+                            
+                                <div style="padding: 10px;">
+                                    <div>
+                                        <b id='business-name' style="color: black;font-size: 20px">ID Licitación: {{ users.CodigoExterno }}</b>
+                                        <br>
+                                        <b id='business-name' style="color: blue;font-size: 20px"> {{ users.Nombre }}</b>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Estado:</span>
+                    <em>{{users.Estado}}</em>
+                </div>
+                
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Descripción:</span>
+                    <em>{{users.Descripcion}}</em>
+                </div>
+
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Tipo de licitación:</span>
+                    <em>{{users.Tipo}}</em>
+                </div>
+
+                
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Tipo de convocatoria:</span>
+                    <em>{{users.TipoConvocatoria}}</em>
+                </div>
+                
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Moneda:</span>
+                    <em>{{users.Moneda}}</em>
+                </div>
+                
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Monto Estimado: </span>
+                    <em>{{users.MontoEstimado}}</em>
+                </div>
+                
+                <div class="col-lg-12">
+                    <span class="info-label" style="text-align: left; color: black; font-size: 18px;">Días de cierre licitación:</span>
+                    <em>{{users.DiasCierreLicitacion}}</em>
+                </div>
+
+            </article>
+        </div>
+     </div>
+</div>
+
+
+
+
+{% endblock content %}
